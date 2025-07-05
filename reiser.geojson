@@ -11,9 +11,12 @@
           ]
         },
         "properties": {
-          "reiseId": "reise1",
-          "navn": "Oslo → Berlin",
-          "farge": "blue"
+          "type": "reise",
+          "navn": "Oslo til Berlin",
+          "reiseID": "",
+          "lengde": "",
+          "varighet": ""
+          
         }
       },
   
@@ -25,7 +28,10 @@
         },
         "properties": {
           "type": "start",
-          "navn": "Oslo"
+          "navn": "Oslo",
+          "tid": "",
+          "spor": "",
+          "land": ""
         }
       },
       {
@@ -36,7 +42,10 @@
         },
         "properties": {
           "type": "stasjon",
-          "navn": "Göteborg"
+          "navn": "Göteborg",
+          "tid": "",
+          "spor": "",
+          "land": ""
         }
       },
       {
@@ -47,7 +56,10 @@
         },
         "properties": {
           "type": "slutt",
-          "navn": "Berlin"
+          "navn": "Berlin",
+          "tid": "",
+          "spor": "",
+          "land": ""
         }
       }
     ]
