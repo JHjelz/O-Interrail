@@ -74,4 +74,8 @@ body {
 
 .blogg-knapp {
     background-color: orange;
+    border-color: white;
+    border-width: 2px;
+    border-radius: 3px;
+    cursor: pointer;
 }
