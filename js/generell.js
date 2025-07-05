@@ -1,3 +1,10 @@
+// Generer div
+function lagDiv(klasse) {
+    const div = document.createElement("div");
+    if (klasse) div.className = klasse;
+    return div;
+}
+
 // Generer knapp
 function lagKnapp(tekst, id, klasse, onclick) {
     const knapp = document.createElement("button");
