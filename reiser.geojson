@@ -7,13 +7,13 @@
         "geometry": {
           "type": "LineString",
           "coordinates": [
-            [10.75, 59.91], [11.97, 57.71], [12.57, 55.68], [10.00, 53.55], [13.40, 52.52]
+            [10.39818647605795, 63.436237558235916], [12.10018544624509, 63.31638517734369], [17.315687274207864, 62.38687601576876], [18.05883102679439, 59.330621960245345], [15.625984695561158, 58.41618546449829]
           ]
         },
         "properties": {
           "type": "reise",
-          "navn": "Oslo til Berlin",
-          "reiseID": "",
+          "navn": "Trondheim til Linköping",
+          "reiseID": "R001",
           "lengde": "",
           "varighet": ""
           
@@ -24,42 +24,75 @@
         "type": "Feature",
         "geometry": {
           "type": "Point",
-          "coordinates": [10.75, 59.91]
+          "coordinates": [10.39818647605795, 63.436237558235916]
         },
         "properties": {
           "type": "start",
-          "navn": "Oslo",
-          "tid": "",
-          "spor": "",
-          "land": ""
+          "navn": "Trondheim",
+          "ankomst": "-",
+          "avgang": "07:31",
+          "spor": "2",
+          "land": "Norge"
         }
       },
       {
         "type": "Feature",
         "geometry": {
           "type": "Point",
-          "coordinates": [11.97, 57.71]
+          "coordinates": [12.10018544624509, 63.31638517734369]
         },
         "properties": {
           "type": "stasjon",
-          "navn": "Göteborg",
-          "tid": "",
-          "spor": "",
-          "land": ""
+          "navn": "Storlien",
+          "ankomst": "09:08",
+          "avgang": "09:28",
+          "spor": "1",
+          "land": "Sverige"
         }
       },
       {
         "type": "Feature",
         "geometry": {
           "type": "Point",
-          "coordinates": [13.40, 52.52]
+          "coordinates": [17.315687274207864, 62.38687601576876]
+        },
+        "properties": {
+          "type": "stasjon",
+          "navn": "Sundsvall C",
+          "ankomst": "13:53",
+          "avgang": "14:04",
+          "spor": "-",
+          "land": "Sverige"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [18.05883102679439, 59.330621960245345]
+        },
+        "properties": {
+          "type": "stasjon",
+          "navn": "Stockholm Central",
+          "ankomst": "17:37",
+          "avgang": "18:24",
+          "spor": "-",
+          "land": "Sverige"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [15.625984695561158, 58.41618546449829]
         },
         "properties": {
           "type": "slutt",
-          "navn": "Berlin",
-          "tid": "",
-          "spor": "",
-          "land": ""
+          "navn": "Linköping C",
+          "ankomst": "20:03",
+          "avgang": "-",
+          "spor": "-",
+          "land": "Sverige"
         }
       }
     ]
