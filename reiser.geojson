@@ -1,0 +1,55 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+  
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [10.75, 59.91], [11.97, 57.71], [12.57, 55.68], [10.00, 53.55], [13.40, 52.52]
+          ]
+        },
+        "properties": {
+          "reiseId": "reise1",
+          "navn": "Oslo → Berlin",
+          "farge": "blue"
+        }
+      },
+  
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [10.75, 59.91]
+        },
+        "properties": {
+          "type": "start",
+          "navn": "Oslo"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [11.97, 57.71]
+        },
+        "properties": {
+          "type": "stasjon",
+          "navn": "Göteborg"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [13.40, 52.52]
+        },
+        "properties": {
+          "type": "slutt",
+          "navn": "Berlin"
+        }
+      }
+    ]
+  }
+  
