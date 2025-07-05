@@ -58,7 +58,7 @@ fetch('reiser.geojson')
                 </table>
             `;
             const linje = L.polyline(feature.geometry.coordinates.map(coord => coord.slice().reverse()), {
-                color: typeTilFarge(props.type),
+                color: typeTilFarge[props.type],
                 weight: 4,
                 opacity: 0.7
             }).bindPopup(popup);
@@ -70,4 +70,3 @@ fetch('reiser.geojson')
     map.addLayer(clusterGruppe);
   })
   .catch(error => console.error('Klarte ikke å laste GeoJSON:', error));
-  
