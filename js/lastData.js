@@ -6,7 +6,25 @@ const typeTilFarge = {
     reise: "blue"
 };
 
-const clusterGruppe = L.markerClusterGroup();
+const clusterGruppe = L.markerClusterGroup({
+    iconCreateFunction: function (cluster) {
+        const count = cluster.getChildCount();
+        // Fargelegging basert på antall objekter i klyngen
+        let c = ' marker-cluster-smal';
+        if (count < 3) {
+            c = ' marker-cluster-green';
+        } else if (count < 6) {
+            c = ' marker-cluster-orange';
+        } else {
+            c = ' marker-cluster-red';
+        }
+        return new L.DivIcon({
+            html: `<div><span>${count}</span></div>`,
+            className: 'marker-cluster' + c,
+            iconSize: new L.Point(40, 40)
+        });
+    }
+});
 
 // Funksjon: hent ikon basert på type
 function lagIkon(farge) {
@@ -36,6 +54,8 @@ fetch('reiser.geojson')
                 <strong>${props.navn}</strong><br>
                 <table>
                     <tr><td><b>Tid:</b></td><td>${props.tid || '-'}</td></tr>
+                    <tr><td><b>Ankomst:</b></td><td>${props.ankomst || '-'}</td></tr>
+                    <tr><td><b>Avgang:</b></td><td>${props.avgang || '-'}</td></tr>
                     <tr><td><b>Spor:</b></td><td>${props.spor || '-'}</td></tr>
                     <tr><td><b>Land:</b></td><td>${props.land || '-'}</td></tr>
                 </table>
@@ -53,7 +73,7 @@ fetch('reiser.geojson')
                 <strong>${props.navn}</strong><br>
                 <table>
                 <tr><td><b>Reise-ID:</b></td><td>${props.reiseId || '-'}</td></tr>
-                <tr><td><b>Lengde:</b></td><td>${props.lengde || '-'}</td></tr>
+                <tr><td><b>Togbytter:</b></td><td>${props.togbytter || '-'}</td></tr>
                 <tr><td><b>Varighet:</b></td><td>${props.varighet || '-'}</td></tr>
                 </table>
             `;

@@ -14,12 +14,12 @@
           "type": "reise",
           "navn": "Trondheim til Linköping",
           "reiseID": "R001",
-          "lengde": "",
-          "varighet": ""
+          "togbytter": 3,
+          "varighet": "11 h, 14 min"
           
         }
       },
-  
+
       {
         "type": "Feature",
         "geometry": {
@@ -29,12 +29,13 @@
         "properties": {
           "type": "start",
           "navn": "Trondheim",
-          "ankomst": "-",
+          "ankomst": "",
           "avgang": "07:31",
           "spor": "2",
           "land": "Norge"
         }
       },
+
       {
         "type": "Feature",
         "geometry": {
@@ -50,6 +51,7 @@
           "land": "Sverige"
         }
       },
+
       {
         "type": "Feature",
         "geometry": {
@@ -61,10 +63,11 @@
           "navn": "Sundsvall C",
           "ankomst": "13:53",
           "avgang": "14:04",
-          "spor": "-",
+          "spor": "",
           "land": "Sverige"
         }
       },
+
       {
         "type": "Feature",
         "geometry": {
@@ -76,10 +79,11 @@
           "navn": "Stockholm Central",
           "ankomst": "17:37",
           "avgang": "18:24",
-          "spor": "-",
+          "spor": "",
           "land": "Sverige"
         }
       },
+
       {
         "type": "Feature",
         "geometry": {
@@ -90,8 +94,8 @@
           "type": "slutt",
           "navn": "Linköping C",
           "ankomst": "20:03",
-          "avgang": "-",
-          "spor": "-",
+          "avgang": "",
+          "spor": "",
           "land": "Sverige"
         }
       }

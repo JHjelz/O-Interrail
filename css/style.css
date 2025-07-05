@@ -40,3 +40,32 @@ body {
     height: 80vh;
     width: 80vw;
 }
+
+.marker-cluster {
+    background-clip: padding-box;
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    border: 3px solid white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.marker-cluster div {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 20px;
+}
+
+.marker-cluster-green {
+    background-color: #38b000;
+}
+
+.marker-cluster-orange {
+    background-color: #f8961e;
+}
+
+.marker-cluster-red {
+    background-color: #d00000;
+}
