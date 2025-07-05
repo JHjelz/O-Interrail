@@ -6,7 +6,7 @@ const lenker = [
     "https://ogruppa.org.ntnu.no/2025/06/26/interrail-o-2/"
 ]
 
-const menyContainer = document.getElementById("")
+const menyContainer = document.getElementById("meny")
 
 for (let i = 0; i < lenker.length; i++) {
     const url = lenker[i];
