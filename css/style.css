@@ -107,3 +107,13 @@ body {
   .blogg-knapp.siste:hover {
     background-color: blue; /* rød på hover */
 }
+
+.leaflet-bootstrap-icon .custom-marker {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    box-shadow: 0 0 4px rgba(0,0,0,0.5);
+}

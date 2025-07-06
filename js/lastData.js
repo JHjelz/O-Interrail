@@ -1,12 +1,20 @@
 // Farger for ulike egenskaper (linjer / stasjoner)
 const typeTilFarge = {
-    start: "green",
-    stasjon: "orange",
-    overnatting: "yellow",
-    slutt: "red",
-    Tog: "blue",
-    Buss: "purple"
+    start: "#28a745",        // grønn
+    stasjon: "#fd7e14",      // oransje
+    overnatting: "#ffc107",  // gul
+    slutt: "#dc3545",        // rød
+    Tog: "#007bff",          // blå
+    Buss: "#6f42c1"          // lilla
 };
+
+// Symboler for ulike egenskaper
+const typeTilIkon = {
+    start: 'bi-geo-alt-fill',
+    stasjon: 'bi-train-front-fill',
+    overnatting: 'bi-house-door-fill',
+    slutt: 'bi-flag-fill'
+}
 
 const clusterGruppe = L.markerClusterGroup({
     iconCreateFunction: function (cluster) {
@@ -29,14 +37,17 @@ const clusterGruppe = L.markerClusterGroup({
 });
 
 // Funksjon: hent ikon basert på type
-function lagIkon(farge) {
-    return L.icon({
-        iconUrl: `https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-${farge}.png`,
-        shadowUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png',
-        iconSize: [25, 41],
-        iconAnchor: [12, 41],
-        popupAnchor: [1, -34],
-        shadowSize: [41, 41]
+function lagIkon(kategori) {
+    const farge = typeTilFarge[kategori] || "gray";
+    const ikon = typeTilIkon[kategori] || "bi-pin-map";
+    return L.divIcon({
+        html: `<div class="custom-marker" style="background-color:${farge};">
+                 <i class="bi ${ikon}" style="color:white;"></i>
+               </div>`,
+        className: 'leaflet-bootstrap-icon',
+        iconSize: [30, 30],
+        iconAnchor: [15, 30],
+        popupAnchor: [0, -30]
     });
 }
 
@@ -63,7 +74,7 @@ fetch('reiser.geojson')
                 </table>
             `;
             const marker = L.marker(feature.geometry.coordinates.reverse(), {
-                icon: lagIkon(farge)
+                icon: lagIkon(props.type)
             }).bindPopup(popup);
     
             clusterGruppe.addLayer(marker);
@@ -76,7 +87,7 @@ fetch('reiser.geojson')
                 ${props.dato}<br>
                 ${props.fremkomstmiddel}<br>
                 <table>
-                <tr><td><b>Reise-ID:</b></td><td>${props.reiseId || '-'}</td></tr>
+                <tr><td><b>Reise-ID:</b></td><td>${props.reiseID || '-'}</td></tr>
                 <tr><td><b>Togbytter:</b></td><td>${props.bytter || '-'}</td></tr>
                 <tr><td><b>Varighet:</b></td><td>${props.varighet || '-'}</td></tr>
                 </table>
