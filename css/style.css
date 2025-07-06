@@ -104,7 +104,7 @@ body {
     border-width: 10px;
 }
   
-  .blogg-knapp.siste:hover {
+.blogg-knapp.siste:hover {
     background-color: blue; /* rød på hover */
 }
 
@@ -123,4 +123,46 @@ body {
     font-size: 22px;         /* Større ikon */
     color: white;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.7);  /* "Glow"/3D-effekt */
+}
+
+.sideMeny {
+    background-color: orangered;
+    color: white;
+    display: block;
+    width: 0;
+    height: 80vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    transition: width 1s ease;
+    z-index: 998;
+    padding: 0px;
+    pointer-events: none;
+}
+
+.sideMeny.åpen {
+    width: 20vw;
+    padding: 5px;
+    pointer-events: auto;
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+  
+.overskrift {
+    flex-grow: 1;
+    text-align: center;
+    font-weight: bold;
+    font-size: 5vh;
+}
+  
+.sidebar-content {
+    margin-top: 15px;
+    overflow-y: scroll;
 }
