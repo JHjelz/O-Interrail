@@ -2,8 +2,10 @@
 const typeTilFarge = {
     start: "green",
     stasjon: "orange",
+    overnatting: "yellow",
     slutt: "red",
-    reise: "blue"
+    Tog: "blue",
+    Buss: "purple"
 };
 
 const clusterGruppe = L.markerClusterGroup({
@@ -52,12 +54,12 @@ fetch('reiser.geojson')
             // Automatisk generering av rik popup
             const popup = `
                 <strong>${props.navn}</strong><br>
+                (${feature.geometry.coordinates})<br>
                 <table>
-                    <tr><td><b>Tid:</b></td><td>${props.tid || '-'}</td></tr>
+                    <tr><td><b>Land:</b></td><td>${props.land || '-'}</td></tr>    
                     <tr><td><b>Ankomst:</b></td><td>${props.ankomst || '-'}</td></tr>
                     <tr><td><b>Avgang:</b></td><td>${props.avgang || '-'}</td></tr>
                     <tr><td><b>Spor:</b></td><td>${props.spor || '-'}</td></tr>
-                    <tr><td><b>Land:</b></td><td>${props.land || '-'}</td></tr>
                 </table>
             `;
             const marker = L.marker(feature.geometry.coordinates.reverse(), {
@@ -71,14 +73,16 @@ fetch('reiser.geojson')
         else if (type == 'LineString') {
             const popup = `
                 <strong>${props.navn}</strong><br>
+                ${props.dato}<br>
+                ${props.fremkomstmiddel}<br>
                 <table>
                 <tr><td><b>Reise-ID:</b></td><td>${props.reiseId || '-'}</td></tr>
-                <tr><td><b>Togbytter:</b></td><td>${props.togbytter || '-'}</td></tr>
+                <tr><td><b>Togbytter:</b></td><td>${props.bytter || '-'}</td></tr>
                 <tr><td><b>Varighet:</b></td><td>${props.varighet || '-'}</td></tr>
                 </table>
             `;
             const linje = L.polyline(feature.geometry.coordinates.map(coord => coord.slice().reverse()), {
-                color: typeTilFarge[props.type],
+                color: typeTilFarge[props.fremkomstmiddel],
                 weight: 4,
                 opacity: 0.7
             }).bindPopup(popup);

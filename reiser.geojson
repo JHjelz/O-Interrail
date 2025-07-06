@@ -13,10 +13,106 @@
         "properties": {
           "type": "reise",
           "navn": "Trondheim til Linköping",
+          "fremkomstmiddel": "Tog",
           "reiseID": "R001",
-          "togbytter": 3,
+          "dato": "25.06.25",
+          "bytter": 3,
           "varighet": "11 h, 14 min"
-          
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [15.625984695561158, 58.41618546449829], [13.000017868385088, 55.60925688558023], [12.564815787836002, 55.67279848164231], [10.006776328870789, 53.553103210939014], [10.236175620498177, 53.669211054597106]
+          ]
+        },
+        "properties": {
+          "type": "reise",
+          "navn": "Linköping til Ahrensburg",
+          "fremkomstmiddel": "Tog",
+          "reiseID": "R002",
+          "dato": "26.06.25",
+          "bytter": 3,
+          "varighet": "8 h, 23 min"
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [10.236175620498177, 53.669211054597106], [10.006776328870789, 53.553103210939014], [11.56002973214216, 48.140418944491145], [12.1196172514157, 47.850416937161654]
+          ]
+        },
+        "properties": {
+          "type": "reise",
+          "navn": "Ahrensburg til Rosenheim",
+          "fremkomstmiddel": "Tog",
+          "reiseID": "R003",
+          "dato": "01.07.25",
+          "bytter": 2,
+          "varighet": "6 h, 43 min"
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [12.1196172514157, 47.850416937161654], [11.504893693636422, 47.002470427435796], [11.119501278898635, 46.07229484955956]
+          ]
+        },
+        "properties": {
+          "type": "reise",
+          "navn": "Rosenheim til Trento",
+          "fremkomstmiddel": "Tog",
+          "reiseID": "R004.1",
+          "dato": "02.07.25",
+          "bytter": 1,
+          "varighet": "3 h, 49 min"
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [11.119501278898635, 46.07229484955956], [11.23139041195125, 46.063356996879165], [11.247740238289708, 46.03321205747829]
+          ]
+        },
+        "properties": {
+          "type": "reise",
+          "navn": "Trento til Ischia",
+          "fremkomstmiddel": "Buss",
+          "reiseID": "R004.2",
+          "dato": "02.07.25",
+          "bytter": 1,
+          "varighet": "56 min"
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [11.247740238289708, 46.03321205747829], [11.119501278898635, 46.07229484955956], [10.726107475253455, 46.033123044489926], [10.827825093014242, 46.22604454775539]
+          ]
+        },
+        "properties": {
+          "type": "reise",
+          "navn": "Ischia til Madonna di Campiglio",
+          "fremkomstmiddel": "Buss",
+          "reiseID": "R005",
+          "dato": "05.07.25",
+          "bytter": 2,
+          "varighet": "3 h, 2 min"
         }
       },
 
@@ -91,12 +187,204 @@
           "coordinates": [15.625984695561158, 58.41618546449829]
         },
         "properties": {
-          "type": "slutt",
+          "type": "overnatting",
           "navn": "Linköping C",
           "ankomst": "20:03",
-          "avgang": "",
+          "avgang": "09:06",
           "spor": "",
           "land": "Sverige"
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [13.000017868385088, 55.60925688558023]
+        },
+        "properties": {
+          "type": "stasjon",
+          "navn": "Malmö C",
+          "ankomst": "11:52",
+          "avgang": "12:50",
+          "spor": "",
+          "land": "Sverige"
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [12.564815787836002, 55.67279848164231]
+        },
+        "properties": {
+          "type": "stasjon",
+          "navn": "København H",
+          "ankomst": "13:27",
+          "avgang": "14:22",
+          "spor": "5",
+          "land": "Danmark"
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [10.006776328870789, 53.553103210939014]
+        },
+        "properties": {
+          "type": "stasjon",
+          "navn": "Hamburg Hbf",
+          "ankomst": "19:00, 09:48",
+          "avgang": "19:11, 10:01",
+          "spor": "11, 6A-C, 6D-F, 14",
+          "land": "Tyskland"
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [10.236175620498177, 53.669211054597106]
+        },
+        "properties": {
+          "type": "overnatting",
+          "navn": "Ahrensburg",
+          "ankomst": "19:33",
+          "avgang": "09:25",
+          "spor": "4, 1",
+          "land": "Tyskland"
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [11.56002973214216, 48.140418944491145]
+        },
+        "properties": {
+          "type": "stasjon",
+          "navn": "München Hbf",
+          "ankomst": "15:44",
+          "avgang": "15:55",
+          "spor": "18, 9",
+          "land": "Tyskland"
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [12.1196172514157, 47.850416937161654]
+        },
+        "properties": {
+          "type": "overnatting",
+          "navn": "Rosenheim",
+          "ankomst": "16:32",
+          "avgang": "10:13",
+          "spor": "4, 7",
+          "land": "Tyskland"
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [11.504893693636422, 47.002470427435796]
+        },
+        "properties": {
+          "type": "stasjon",
+          "navn": "Brennero-Brenner",
+          "ankomst": "12:00",
+          "avgang": "13:00",
+          "spor": "",
+          "land": "Italia"
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [11.119501278898635, 46.07229484955956]
+        },
+        "properties": {
+          "type": "stasjon",
+          "navn": "Trento",
+          "ankomst": "15:02, 08:29",
+          "avgang": "08:48",
+          "spor": "",
+          "land": "Italia"
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [11.23139041195125, 46.063356996879165]
+        },
+        "properties": {
+          "type": "stasjon",
+          "navn": "Pergine Valsugana",
+          "ankomst": "",
+          "avgang": "",
+          "spor": "",
+          "land": "Italia"
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [11.247817294487703, 46.03321432071329]
+        },
+        "properties": {
+          "type": "overnatting",
+          "navn": "Ischia di Pergine",
+          "ankomst": "",
+          "avgang": "07:54",
+          "spor": "",
+          "land": "Italia"
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [10.726107475253455, 46.033123044489926]
+        },
+        "properties": {
+          "type": "stasjon",
+          "navn": "Tione di Trento",
+          "ankomst": "09:56",
+          "avgang": "09:59",
+          "spor": "",
+          "land": "Italia"
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [10.827825093014242, 46.22604454775539]
+        },
+        "properties": {
+          "type": "overnatting",
+          "navn": "Madonna di Campiglio",
+          "ankomst": "10:56",
+          "avgang": "",
+          "spor": "",
+          "land": "Italia"
         }
       }
     ]
