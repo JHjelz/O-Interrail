@@ -45,9 +45,9 @@ function lagIkon(kategori) {
                  <i class="bi ${ikon}" style="color:white;"></i>
                </div>`,
         className: 'leaflet-bootstrap-icon',
-        iconSize: [30, 30],
-        iconAnchor: [15, 30],
-        popupAnchor: [0, -30]
+        iconSize: [50, 50],
+        iconAnchor: [25, 50],
+        popupAnchor: [0, -40]
     });
 }
 
