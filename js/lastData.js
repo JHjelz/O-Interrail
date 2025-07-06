@@ -63,9 +63,10 @@ fetch('reiser.geojson')
         if (type == "Point") {
             const farge = typeTilFarge[props.type] || "orange";
             // Automatisk generering av rik popup
+            const coords = feature.geometry.coordinates.slice();
             const popup = `
                 <strong>${props.navn}</strong><br>
-                (${feature.geometry.coordinates})<br>
+                (${coords[1].toFixed(3)}, ${coords[0].toFixed(3)})<br>
                 <table>
                     <tr><td><b>Land:</b></td><td>${props.land || '-'}</td></tr>    
                     <tr><td><b>Ankomst:</b></td><td>${props.ankomst || '-'}</td></tr>
