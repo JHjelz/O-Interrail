@@ -130,7 +130,6 @@ body {
     color: white;
     display: block;
     width: 0;
-    height: 80vh;
     position: absolute;
     top: 0;
     left: 0;
@@ -143,7 +142,7 @@ body {
 
 .sideMeny.åpen {
     width: 20vw;
-    padding: 5px;
+    padding: 10px;
     pointer-events: auto;
 }
 
@@ -166,7 +165,6 @@ body {
 .sidebar-content {
     display: flex;
     flex-direction: column;
-    margin: 15px;
     height: 100%;
 }
 
