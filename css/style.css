@@ -170,6 +170,12 @@ body {
     height: 100%;
 }
 
+.seksjon-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .sidebar-section {
     flex: 1;
     display: flex;

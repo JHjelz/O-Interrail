@@ -3,12 +3,11 @@ function lagSidebarLagKontroller() {
     sidebarContent.innerHTML = ""; // Tomt innhold fra start
 
     const lagSektion = (tittel, layers, leggTil, fjern) => {
-        const seksjon = document.createElement("div");
-        seksjon.className = "sidebar-section";
+        const seksjon = lagDiv("sidebar-section");
+        const headerRad = lagDiv("seksjon-header");
 
         const overskrift = document.createElement("h4");
         overskrift.textContent = tittel;
-        seksjon.appendChild(overskrift);
 
         // Master toggle-knapp
         const masterKnapp = document.createElement("button");
@@ -26,6 +25,10 @@ function lagSidebarLagKontroller() {
                 }
             });
         };
+
+        headerRad.appendChild(overskrift);
+        headerRad.appendChild(masterKnapp);
+        seksjon.appendChild(overskrift);
 
         const knappContainer = lagDiv("knappContainer")
 
@@ -46,7 +49,7 @@ function lagSidebarLagKontroller() {
             };
             knappContainer.appendChild(knapp);
         }
-        
+
         seksjon.appendChild(masterKnapp);
         seksjon.appendChild(knappContainer);
 
