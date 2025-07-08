@@ -95,17 +95,17 @@ body {
 }
 
 .blogg-knapp:hover {
-    background-color: blue; /* #0077cc; /* blå hover */
+    background-color: blue;
 }
 
 .blogg-knapp.siste {
-    background-color: orangered; /* rød-oransje for siste dag */
+    background-color: orangered;
     border-style: dotted;
     border-width: 10px;
 }
   
 .blogg-knapp.siste:hover {
-    background-color: blue; /* rød på hover */
+    background-color: blue;
 }
 
 .leaflet-bootstrap-icon .custom-marker {
@@ -115,14 +115,14 @@ body {
     border-radius: 50%;
     width: 40px;
     height: 40px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.4); /* tydeligere skygge */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
     border: 2px solid white;
 }
 
 .leaflet-bootstrap-icon .custom-marker i {
-    font-size: 22px;         /* Større ikon */
+    font-size: 22px;
     color: white;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.7);  /* "Glow"/3D-effekt */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
 }
 
 .sideMeny {

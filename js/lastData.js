@@ -1,11 +1,11 @@
 // Farger for ulike egenskaper (linjer / stasjoner)
 const typeTilFarge = {
-    start: "#28a745",        // grønn
-    stasjon: "#fd7e14",      // oransje
-    overnatting: "#ffc107",  // gul
-    slutt: "#dc3545",        // rød
-    Tog: "#007bff",          // blå
-    Buss: "#6f42c1"          // lilla
+    start: "#28a745",        // Grønn
+    stasjon: "#fd7e14",      // Oransje
+    overnatting: "#ffc107",  // Gul
+    slutt: "#dc3545",        // Rød
+    Tog: "#007bff",          // Blå
+    Buss: "#6f42c1"          // Lilla
 };
 
 // Symboler for ulike egenskaper
@@ -61,9 +61,8 @@ fetch('reiser.geojson')
         
         // Punkt
         if (type == "Point") {
-            const farge = typeTilFarge[props.type] || "orange";
-            // Automatisk generering av rik popup
             const coords = feature.geometry.coordinates.slice();
+            // Automatisk generering av rik popup
             const popup = `
                 <strong>${props.navn}</strong><br>
                 (${coords[1].toFixed(3)}, ${coords[0].toFixed(3)})<br>
@@ -74,7 +73,7 @@ fetch('reiser.geojson')
                     <tr><td><b>Spor:</b></td><td>${props.spor || '-'}</td></tr>
                 </table>
             `;
-            const marker = L.marker(feature.geometry.coordinates.reverse(), {
+            const marker = L.marker(coords.reverse(), {
                 icon: lagIkon(props.type)
             }).bindPopup(popup);
     

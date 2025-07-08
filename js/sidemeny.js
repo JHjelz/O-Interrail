@@ -10,15 +10,15 @@ function openSideMeny() {
     menyOpen = !menyOpen;
     if (menyOpen) {
         sideMeny.classList.add("åpen");
-        apneKnapp.style.display = "none";
+        åpneKnapp.style.display = "none";
     } else {
         sideMeny.classList.remove("åpen");
-        apneKnapp.style.display = "block";
+        åpneKnapp.style.display = "block";
     }
 }
 
 // Knapper for å åpne og lukke menyen
-const apneKnapp = lagKnappIkon(
+const åpneKnapp = lagKnappIkon(
     openSideMeny,
     "bi-plus-circle-fill", 
     "M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z",
@@ -53,7 +53,7 @@ sideMeny.appendChild(sidebarContent);
 
 // Legg innholdet til i kartet
 container.appendChild(sideMeny);
-container.appendChild(apneKnapp);
+container.appendChild(åpneKnapp);
 
 // Forhindrer interaksjon med kartet når musepekeren er over sidebar
 sideMeny.addEventListener("mouseenter", () => {
