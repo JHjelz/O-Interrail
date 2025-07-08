@@ -2,7 +2,7 @@
 function lagSidebarLagKontroller() {
     sidebarContent.innerHTML = ""; // Tomt innhold fra start
 
-    const lagSection = (tittel, layers, leggTil, fjern) => {
+    const lagSection = (tittel, layers) => {
         const seksjon = lagDiv("sidebar-section");
         const overskrift = document.createElement("h4");
         overskrift.textContent = tittel;
@@ -13,7 +13,7 @@ function lagSidebarLagKontroller() {
             "Skru av/på alle",
             "",
             "master-knapp",
-            fjernAlt(leggTil, fjern)
+            fjernAlt()
         );
         seksjon.appendChild(masterKnapp);
 
@@ -23,7 +23,7 @@ function lagSidebarLagKontroller() {
                 id,
                 "",
                 "lag-knapp",
-                fjernEttLag(lag, leggTil, fjern)
+                fjernEttLag(lag)
             );
             seksjon.appendChild(knapp);
         }
@@ -31,20 +31,22 @@ function lagSidebarLagKontroller() {
     };
 
     // Lag linje-seksjon
-    lagSection("Linjer", lineLayers,
-        lag => lag.addTo(map),
-        lag => map.removeLayer(lag)
-    );
+    lagSection("Linjer", lineLayers);
 
     // Lag punkt-seksjon (via cluster)
-    lagSection("Steder", markerLayers,
-        lag => clusterGruppe.addLayer(lag),
-        lag => clusterGruppe.removeLayer(lag)
-    );
+    lagSection("Steder", markerLayers);
+}
+
+// Hjelpefunksjoner
+function leggTil(lag) {
+    lag.addTo(map);
+}
+function fjern(lag) {
+    map.removeLayer(lag);
 }
 
 // Funksjon som fjerner alle kartlag
-function fjernAlt(leggTil, fjern) {
+function fjernAlt() {
     const påKartet = Object.values(layers)[0]._map !== null;
     Object.values(layers).forEach(layer => {
         if (påKartet) {
@@ -58,7 +60,7 @@ function fjernAlt(leggTil, fjern) {
 }
 
 // Funksjon som fjerner ett kartlag
-function fjernEttLag(lag, leggTil, fjern) {
+function fjernEttLag(lag) {
     const påKartet = lag._map !== null;
     if (påKartet) {
         fjern(lag);
