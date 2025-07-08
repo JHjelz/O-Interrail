@@ -157,13 +157,14 @@ body {
   
 .overskrift {
     flex-grow: 1;
-    text-align: center;
+    top: 15px;
+    left: 15px;
     font-weight: bold;
     font-size: 5vh;
 }
   
 .sidebar-content {
-    margin-top: 15px;
+    margin: 15px;
     overflow-y: scroll;
 }
 
@@ -173,16 +174,21 @@ body {
 
 .sidebar-section h4 {
     margin-bottom: 0.5rem;
-    font-size: 1rem;
-    border-bottom: 1px solid #ccc;
+    font-size: 3vh;
+    font-weight: bold;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .lag-knapp {
     display: block;
-    margin: 2px 0;
-    padding: 4px 8px;
-    background-color: #eee;
-    border: none;
+    margin: 0.5vh;
+    padding: 0.5vh;
+    background-color: green;
+    color: white;
+    font-size: 1vh;
+    border: white;
+    border-width: 2px;
+    border-radius: 5px;
     cursor: pointer;
     text-align: left;
 }
