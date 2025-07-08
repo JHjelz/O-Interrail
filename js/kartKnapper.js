@@ -13,13 +13,21 @@ function lagSidebarLagKontroller() {
         // Master toggle-knapp
         const masterKnapp = document.createElement("button");
         masterKnapp.textContent = "Skru av/på alle";
+        masterKnapp.className = "master-knapp";
         masterKnapp.onclick = () => {
             const påKartet = Object.values(layers)[0]._map !== null;
             Object.values(layers).forEach(layer => {
-                if (påKartet) fjern(layer); else leggTil(layer);
+                if (påKartet) {
+                    fjern(layer);
+                    masterKnapp.classList.add("av");
+                } else {
+                    leggTil(layer);
+                    masterKnapp.classList.remove("av");
+                }
             });
         };
-        seksjon.appendChild(masterKnapp);
+
+        const knappContainer = lagDiv("knappContainer")
 
         // En knapp per element
         for (const [id, lag] of Object.entries(layers)) {
@@ -36,8 +44,11 @@ function lagSidebarLagKontroller() {
                     knapp.classList.remove("av");
                 }
             };
-            seksjon.appendChild(knapp);
+            knappContainer.appendChild(knapp);
         }
+        
+        seksjon.appendChild(masterKnapp);
+        seksjon.appendChild(knappContainer);
 
         sidebarContent.appendChild(seksjon);
     };
