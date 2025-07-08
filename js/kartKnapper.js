@@ -13,7 +13,7 @@ function lagSidebarLagKontroller() {
             "Skru av/på alle",
             "",
             "master-knapp",
-            fjernAlt()
+            fjernAlt(layers)
         );
         seksjon.appendChild(masterKnapp);
 
@@ -46,7 +46,7 @@ function fjern(lag) {
 }
 
 // Funksjon som fjerner alle kartlag
-function fjernAlt() {
+function fjernAlt(layers) {
     const påKartet = Object.values(layers)[0]._map !== null;
     Object.values(layers).forEach(layer => {
         if (påKartet) {
