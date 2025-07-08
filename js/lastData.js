@@ -36,6 +36,10 @@ const clusterGruppe = L.markerClusterGroup({
     }
 });
 
+// Lagring av hvert unike objekt
+const markerLayers = {};
+const lineLayers = {};
+
 // Funksjon: hent ikon basert på type
 function lagIkon(kategori) {
     const farge = typeTilFarge[kategori] || "gray";
@@ -58,6 +62,7 @@ fetch('reiser.geojson')
     data.features.forEach(feature => {
         const props = feature.properties;
         const type = feature.geometry.type;
+        const id = props.navn;
         
         // Punkt
         if (type == "Point") {
@@ -76,6 +81,8 @@ fetch('reiser.geojson')
             const marker = L.marker(coords.reverse(), {
                 icon: lagIkon(props.type)
             }).bindPopup(popup);
+
+            markerLayers[id] = marker;
     
             clusterGruppe.addLayer(marker);
         }
@@ -97,11 +104,16 @@ fetch('reiser.geojson')
                 weight: 4,
                 opacity: 0.7
             }).bindPopup(popup);
-            linje.addTo(map)
+
+            lineLayers[id] = linje;
+
+            linje.addTo(map);
         }
     });
     
     // Legger til clustering
     map.addLayer(clusterGruppe);
+
+    lagSidebarLagKontroller();
   })
   .catch(error => console.error('Klarte ikke å laste GeoJSON:', error));

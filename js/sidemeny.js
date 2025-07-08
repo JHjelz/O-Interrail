@@ -39,7 +39,7 @@ const lukkeKnapp = lagKnappIkon(
 // Innholdet i menyen
 
 const dataTittel = lagDiv("overskrift"); // Overskrift
-dataTittel.innerHTML = "Data";
+dataTittel.innerHTML = "Kart-meny";
 
 const header = lagDiv("sidebar-header"); // Header
 
