@@ -9,31 +9,22 @@ function lagSidebarLagKontroller() {
         seksjon.appendChild(overskrift);
 
         // Master toggle-knapp
-        const masterKnapp = document.createElement("button");
-        masterKnapp.textContent = "Skru av/på alle";
-        masterKnapp.onclick = () => {
-            const påKartet = Object.values(layers)[0]._map !== null;
-            Object.values(layers).forEach(layer => {
-                if (påKartet) fjern(layer); else leggTil(layer);
-            });
-        };
+        const masterKnapp = lagKnapp(
+            "Skru av/på alle",
+            "",
+            "master-knapp",
+            fjernAlt
+        );
         seksjon.appendChild(masterKnapp);
 
         // Én knapp per element
         for (const [id, lag] of Object.entries(layers)) {
-            const knapp = document.createElement("button");
-            knapp.textContent = id;
-            knapp.className = "lag-knapp";
-            knapp.onclick = () => {
-                const påKartet = lag._map !== null;
-                if (påKartet) {
-                    fjern(lag);
-                    knapp.classList.add("av");
-                } else {
-                    leggTil(lag);
-                    knapp.classList.remove("av");
-                }
-            };
+            const knapp = lagKnapp(
+                id,
+                "",
+                "lag-knapp",
+                fjernEttLag(lag)
+            );
             seksjon.appendChild(knapp);
         }
         sidebarContent.appendChild(seksjon);
@@ -50,4 +41,30 @@ function lagSidebarLagKontroller() {
         lag => clusterGruppe.addLayer(lag),
         lag => clusterGruppe.removeLayer(lag)
     );
+}
+
+// Funksjon som fjerner alle kartlag
+function fjernAlt() {
+    const påKartet = Object.values(layers)[0]._map !== null;
+    Object.values(layers).forEach(layer => {
+        if (påKartet) {
+            fjern(layer);
+            masterKnapp.classList.add("av");
+            } else {
+            leggTil(layer);
+            masterKnapp.classList.remove("av");
+            }
+    });
+}
+
+// Funksjon som fjerner ett kartlag
+function fjernEttLag(lag) {
+    const påKartet = lag._map !== null;
+    if (påKartet) {
+        fjern(lag);
+        knapp.classList.add("av");
+    } else {
+        leggTil(lag);
+        knapp.classList.remove("av");
+    }
 }

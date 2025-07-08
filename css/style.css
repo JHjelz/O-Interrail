@@ -174,18 +174,18 @@ body {
 
 .sidebar-section h4 {
     margin-bottom: 0.5rem;
-    font-size: 3vh;
+    font-size: 4vh;
     font-weight: bold;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .lag-knapp {
     display: block;
-    margin: 0.5vh;
-    padding: 0.5vh;
+    margin-top: 5px;
+    margin-bottom: 5px;
     background-color: green;
     color: white;
-    font-size: 1vh;
+    font-size: 2vh;
     border: white;
     border-width: 2px;
     border-radius: 5px;
@@ -196,4 +196,25 @@ body {
 .lag-knapp.av {
     opacity: 0.5;
     text-decoration: line-through;
+    background-color: red;
+}
+
+.master-knapp {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color: green;
+    color: white;
+    font-size: 3vh;
+    border: white;
+    border-width: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: left;
+}
+
+.master-knapp.av {
+    opacity: 0.5;
+    text-decoration: line-through;
+    background-color: red;
 }
