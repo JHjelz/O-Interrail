@@ -130,7 +130,7 @@ body {
     color: white;
     display: block;
     width: 0;
-    height: 80vh;
+    height: 100%;
     position: absolute;
     top: 0;
     left: 0;
@@ -189,6 +189,8 @@ body {
     font-size: 4vh;
     font-weight: bold;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 0;
+    margin: 0;
 }
 
 .knappContainer {
