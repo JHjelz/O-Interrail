@@ -7,7 +7,7 @@ body {
 .header {
     background-color: orange;
     color: white;
-    height: 16vh;
+    height: 20vh;
     font-size: 14vh;
     font-weight: bold;
     align-items: center;
@@ -24,7 +24,7 @@ body {
 
 .mainContent {
     color: white;
-    height: 84vh;
+    height: 80vh;
     display: flex;
     flex-direction: row;
     flex-grow: 2;
@@ -130,7 +130,7 @@ body {
     color: white;
     display: block;
     width: 0;
-    height: 84vh;
+    height: 80vh;
     position: absolute;
     top: 0;
     left: 0;
