@@ -1,6 +1,6 @@
 // Funksjon som dynamisk genererer knapper for kartlag
 function lagSidebarLagKontroller() {
-    const container = document.getElementById("sidebar-content");
+    sidebarContent.innerHTML = ""; // Tomt innhold fra start
 
     const lagSektion = (tittel, layers, leggTil, fjern) => {
         const seksjon = lagDiv("sidebar-section");
@@ -52,7 +52,7 @@ function lagSidebarLagKontroller() {
         seksjon.appendChild(headerRad);
         seksjon.appendChild(knappContainer);
 
-        container.appendChild(seksjon);
+        sidebarContent.appendChild(seksjon);
     };
 
     // Lag linje-seksjon

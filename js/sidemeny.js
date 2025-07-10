@@ -48,7 +48,7 @@ header.appendChild(lukkeKnapp); // ... og lukke-knapp
 sideMeny.appendChild(header);
 
 // Tom container for dynamisk innhold
-const sidebarContent = lagDiv("sidebar-content", "sidebar-content");
+const sidebarContent = lagDiv("sidebar-content");
 sideMeny.appendChild(sidebarContent);
 
 // Legg innholdet til i kartet
