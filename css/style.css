@@ -24,7 +24,7 @@ body {
 
 .mainContent {
     color: white;
-    height: 80vh;
+    height: 84vh;
     display: flex;
     flex-direction: row;
     flex-grow: 2;
@@ -130,6 +130,7 @@ body {
     color: white;
     display: block;
     width: 0;
+    height: 84vh;
     position: absolute;
     top: 0;
     left: 0;
@@ -165,11 +166,14 @@ body {
 .sidebar-content {
     display: flex;
     flex-direction: column;
+    flex-grow: 2;
     height: 100%;
 }
 
 .seksjon-header {
     display: flex;
+    flex-direction: row;
+    flex-grow: 2;
     align-items: center;
     justify-content: space-between;
 }
@@ -189,7 +193,7 @@ body {
 
 .knappContainer {
     flex: 1;
-    overflow-y: auto;
+    overflow-y: scroll;
 }
 
 .lag-knapp {

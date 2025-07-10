@@ -28,7 +28,7 @@ function lagSidebarLagKontroller() {
 
         headerRad.appendChild(overskrift);
         headerRad.appendChild(masterKnapp);
-        seksjon.appendChild(overskrift);
+        seksjon.appendChild(headerRad);
 
         const knappContainer = lagDiv("knappContainer")
 
