@@ -1,7 +1,8 @@
 // Generer div
-function lagDiv(klasse) {
+function lagDiv(id, klasse) {
     const div = document.createElement("div");
     if (klasse) div.className = klasse;
+    if (id) div.id = id;
     return div;
 }
 

@@ -176,6 +176,7 @@ body {
     flex-grow: 2;
     align-items: center;
     justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .sidebar-section {
@@ -188,7 +189,6 @@ body {
 .sidebar-section h4 {
     font-size: 4vh;
     font-weight: bold;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     padding: 0;
     margin: 0;
 }
