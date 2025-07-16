@@ -1,6 +1,7 @@
 // Funksjon som dynamisk genererer knapper for kartlag
 function lagSidebarLagKontroller() {
-    sidebarContent.innerHTML = ""; // Tomt innhold fra start
+    const sidebarContent = document.getElementById("sidebar-content");
+    //sidebarContent.innerHTML = ""; // Tomt innhold fra start
 
     const lagSektion = (tittel, layers, leggTil, fjern) => {
         const seksjon = lagDiv("sidebar-section");
@@ -14,9 +15,9 @@ function lagSidebarLagKontroller() {
         masterKnapp.textContent = "Skru av/på alle";
         masterKnapp.className = "master-knapp";
         masterKnapp.onclick = () => {
-            const påKartet = Object.values(layers)[0]._map !== null;
+            const paKartet = Object.values(layers)[0]._map !== null;
             Object.values(layers).forEach(layer => {
-                if (påKartet) {
+                if (paKartet) {
                     fjern(layer);
                     masterKnapp.classList.add("av");
                 } else {
@@ -37,8 +38,8 @@ function lagSidebarLagKontroller() {
             knapp.textContent = id;
             knapp.className = "lag-knapp";
             knapp.onclick = () => {
-                const påKartet = lag._map !== null;
-                if (påKartet) {
+                const paKartet = lag._map !== null;
+                if (paKartet) {
                     fjern(lag);
                     knapp.classList.add("av");
                 } else {

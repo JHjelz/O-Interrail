@@ -9,16 +9,16 @@ const container = document.getElementById("map"); // Der en vil plassere menyen
 function openSideMeny() {
     menyOpen = !menyOpen;
     if (menyOpen) {
-        sideMeny.classList.add("åpen");
-        åpneKnapp.style.display = "none";
+        sideMeny.classList.add("apen");
+        apneKnapp.style.display = "none";
     } else {
-        sideMeny.classList.remove("åpen");
-        åpneKnapp.style.display = "block";
+        sideMeny.classList.remove("apen");
+        apneKnapp.style.display = "block";
     }
 }
 
 // Knapper for å åpne og lukke menyen
-const åpneKnapp = lagKnappIkon(
+const apneKnapp = lagKnappIkon(
     openSideMeny,
     "bi-plus-circle-fill", 
     "M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z",
@@ -37,6 +37,8 @@ const lukkeKnapp = lagKnappIkon(
 );
 
 // Innholdet i menyen
+// Tom container for dynamisk innhold
+const sidebarContent = lagDiv("sidebar-content", "sidebar-content");
 
 const dataTittel = lagDiv("overskrift"); // Overskrift
 dataTittel.innerHTML = "Kart-meny";
@@ -45,15 +47,14 @@ const header = lagDiv("sidebar-header"); // Header
 
 header.appendChild(dataTittel); // ... som holder kontroll på overskrift
 header.appendChild(lukkeKnapp); // ... og lukke-knapp
-sideMeny.appendChild(header);
 
-// Tom container for dynamisk innhold
-const sidebarContent = lagDiv("sidebar-content");
+sidebarContent.appendChild(header);
+
 sideMeny.appendChild(sidebarContent);
 
 // Legg innholdet til i kartet
 container.appendChild(sideMeny);
-container.appendChild(åpneKnapp);
+container.appendChild(apneKnapp);
 
 // Forhindrer interaksjon med kartet når musepekeren er over sidebar
 sideMeny.addEventListener("mouseenter", () => {
