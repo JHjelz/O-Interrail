@@ -38,7 +38,7 @@ const lukkeKnapp = lagKnappIkon(
 
 // Innholdet i menyen
 // Tom container for dynamisk innhold
-const sidebarContent = lagDiv("sidebar-content", "sidebar-content");
+const sidebarContent = lagDiv("sidebar-content", "sidebarContent");
 
 const dataTittel = lagDiv("overskrift"); // Overskrift
 dataTittel.innerHTML = "Kart-meny";

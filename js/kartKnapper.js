@@ -1,6 +1,7 @@
 // Funksjon som dynamisk genererer knapper for kartlag
 function lagSidebarLagKontroller() {
-    const sidebarContent = document.getElementById("sidebar-content");
+    const sidebarContent = document.getElementById("sidebarContent");
+    console.log(sidebarContent)
     //sidebarContent.innerHTML = ""; // Tomt innhold fra start
 
     const lagSektion = (tittel, layers, leggTil, fjern) => {

@@ -57,7 +57,6 @@ function lagIkon(kategori) {
 
 // Last inn GeoJSON
 
-/*
 fetch('reiser.geojson')
   .then(response => response.json())
   .then(data => {
@@ -119,6 +118,3 @@ fetch('reiser.geojson')
     lagSidebarLagKontroller();
   })
   .catch(error => console.error('Klarte ikke å laste GeoJSON:', error));
-*/
-
-lagSidebarLagKontroller();
