@@ -177,6 +177,7 @@ body {
     flex-grow: 2;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 2vh;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
@@ -193,7 +194,7 @@ body {
 }
 
 .knappContainer {
-    flex: 1;
+    height: 100%;
     overflow-y: scroll;
 }
 
