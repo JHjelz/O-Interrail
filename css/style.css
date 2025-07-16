@@ -177,12 +177,13 @@ body {
     flex-grow: 2;
     align-items: center;
     justify-content: space-between;
+    height: 6vh;
     margin-bottom: 2vh;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .sidebar-section {
-    height: 50%;
+    height: calc((80vh - 20px) / 2);
     overflow: hidden;
 }
 
@@ -194,7 +195,7 @@ body {
 }
 
 .knappContainer {
-    height: 100%;
+    height: calc((80vh - 20px) / 2 - 8vh);
     overflow-y: scroll;
 }
 
