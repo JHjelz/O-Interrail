@@ -234,7 +234,7 @@ body {
     background-color: green;
     height: 3vh;
     width: 3vh;
-    border: black;
+    border-color: black;
     border-width: 50px;
     border-radius: 1.5vh;
     cursor: pointer;

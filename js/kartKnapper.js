@@ -1,7 +1,6 @@
 // Funksjon som dynamisk genererer knapper for kartlag
 function lagSidebarLagKontroller() {
     const sidebarContent = document.getElementById("sidebarContent");
-    //sidebarContent.innerHTML = ""; // Tomt innhold fra start
 
     const lagSektion = (tittel, layers, leggTil, fjern) => {
         const seksjon = lagDiv("sidebar-section");
@@ -16,15 +15,14 @@ function lagSidebarLagKontroller() {
         masterKnapp.className = "master-knapp";
         masterKnapp.onclick = () => {
             const pa = masterKnapp.style.backgroundColor === "green";
-            console.log(document.getElementsByClassName(tittel));
-            document.getElementsByClassName(tittel).array.forEach(button => {
+            document.getElementsByClassName(tittel).forEach(button => {
                 if (button.style.backgroundColor === "green") {
                     if (pa) {
-                        button.click;
+                        button.click();
                     }
                 } else if (button.style.backgroundColor === "red") {
                     if (!pa) {
-                        button.click;
+                        button.click();
                     }
                 }
             });
