@@ -1,7 +1,6 @@
 // Funksjon som dynamisk genererer knapper for kartlag
 function lagSidebarLagKontroller() {
     const sidebarContent = document.getElementById("sidebarContent");
-    console.log(sidebarContent)
     //sidebarContent.innerHTML = ""; // Tomt innhold fra start
 
     const lagSektion = (tittel, layers, leggTil, fjern) => {
@@ -17,6 +16,7 @@ function lagSidebarLagKontroller() {
         masterKnapp.className = "master-knapp";
         masterKnapp.onclick = () => {
             const pa = masterKnapp.style.backgroundColor === "green";
+            console.log(document.getElementsByClassName(tittel));
             document.getElementsByClassName(tittel).array.forEach(button => {
                 if (button.style.backgroundColor === "green") {
                     if (pa) {
