@@ -13,7 +13,7 @@ function lagSidebarLagKontroller() {
 
         // Master toggle-knapp
         const masterKnapp = document.createElement("button");
-        masterKnapp.textContent = "Skru av/på alle";
+        //masterKnapp.textContent = "Skru av/på alle";
         masterKnapp.className = "master-knapp";
         masterKnapp.onclick = () => {
             const paKartet = Object.values(layers)[0]._map !== null;
