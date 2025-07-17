@@ -119,6 +119,82 @@
       {
         "type": "Feature",
         "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [10.827825093014242, 46.22604454775539], [11.119501278898635, 46.07229484955956]
+          ]
+        },
+        "properties": {
+          "type": "reise",
+          "navn": "Madonna di Campiglio til Trento",
+          "fremkomstmiddel": "Buss",
+          "reiseID": "R006.1",
+          "dato": "13.07.25",
+          "bytter": 0,
+          "varighet": "1 h, 49 min"
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [11.119501278898635, 46.07229484955956], [11.358367256446797, 46.49675550287807], [11.504893693636422, 47.002470427435796], [11.400949333247329, 47.263366964907114], [14.291225982119306, 48.2906456752722]
+          ]
+        },
+        "properties": {
+          "type": "reise",
+          "navn": "Trento til Linz",
+          "fremkomstmiddel": "Tog",
+          "reiseID": "R006.2",
+          "dato": "13.07.25",
+          "bytter": 3,
+          "varighet": "6 h, 8 min"
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [14.291225982119306, 48.2906456752722], [14.878255249220535, 48.12188172314956], [15.099708329765917, 48.158904852756], [15.330843424305916, 48.2247415923573]
+          ]
+        },
+        "properties": {
+          "type": "reise",
+          "navn": "Linz til Melk",
+          "fremkomstmiddel": "Tog",
+          "reiseID": "R007.1",
+          "dato": "16.07.25",
+          "bytter": 2,
+          "varighet": "1 h, 1 min"
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [15.330843424305916, 48.2247415923573], [15.119522451789466, 48.36683128227006]
+          ]
+        },
+        "properties": {
+          "type": "reise",
+          "navn": "Melk til Gutenbrunn",
+          "fremkomstmiddel": "Buss",
+          "reiseID": "R007.2",
+          "dato": "16.07.25",
+          "bytter": 0,
+          "varighet": "1 h, 4 min"
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
           "type": "Point",
           "coordinates": [10.39818647605795, 63.436237558235916]
         },
@@ -301,8 +377,8 @@
         "properties": {
           "type": "stasjon",
           "navn": "Brennero-Brenner",
-          "ankomst": "12:00",
-          "avgang": "13:00",
+          "ankomst": "12:00, 13:22",
+          "avgang": "13:00, 13:33",
           "spor": "",
           "land": "Italia"
         }
@@ -385,6 +461,118 @@
           "avgang": "",
           "spor": "",
           "land": "Italia"
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [11.358367256446797, 46.49675550287807]
+        },
+        "properties": {
+          "type": "stasjon",
+          "navn": "Bolzano Bozen",
+          "ankomst": "11:37",
+          "avgang": "12:02",
+          "spor": "",
+          "land": "Italia"
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [11.400949333247329, 47.263366964907114]
+        },
+        "properties": {
+          "type": "stasjon",
+          "navn": "Innsbruck Hbf",
+          "ankomst": "14:13",
+          "avgang": "15:17",
+          "spor": "6A-C, 10",
+          "land": "Østerrike"
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [14.291225982119306, 48.2906456752722]
+        },
+        "properties": {
+          "type": "overnatting",
+          "navn": "Linz Hbf",
+          "ankomst": "18:46",
+          "avgang": "13:32",
+          "spor": "7A-F",
+          "land": "Østerrike"
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [14.878255249220535, 48.12188172314956]
+        },
+        "properties": {
+          "type": "stasjon",
+          "navn": "Amstetten Noe",
+          "ankomst": "14:05",
+          "avgang": "14:10",
+          "spor": "3, 5E-F",
+          "land": "Østerrike"
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [15.099708329765917, 48.158904852756]
+        },
+        "properties": {
+          "type": "stasjon",
+          "navn": "Ybbs A. D. Donau",
+          "ankomst": "14:22",
+          "avgang": "15:23",
+          "spor": "2",
+          "land": "Østerrike"
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [15.330843424305916, 48.2247415923573]
+        },
+        "properties": {
+          "type": "stasjon",
+          "navn": "Melk",
+          "ankomst": "15:39",
+          "avgang": "17:29",
+          "spor": "1",
+          "land": "Østerrike"
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [15.119522451789466, 48.36683128227006]
+        },
+        "properties": {
+          "type": "overnatting",
+          "navn": "Gutenbrunn b. Martinsberg",
+          "ankomst": "18:33",
+          "avgang": "",
+          "spor": "",
+          "land": "Østerrike"
         }
       }
     ]
