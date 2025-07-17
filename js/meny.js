@@ -40,10 +40,9 @@ for (let i = 0; i < lenker.length; i++) {
     // Looper gjennom alle lenkene og genererer en knapp for hver av dem
     // Siste legges i "topNews" istedenfor "newsContainer"
     const url = lenker[i];
+    let k = i;
     if (i >= 18) {
-        const k = i + 1;
-    } else {
-        const k = i;
+        k++;
     }
     const klasse = (i === lenker.length - 1) ? "blogg-knapp siste" : "blogg-knapp";
     const knapp = lagKnapp(

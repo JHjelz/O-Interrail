@@ -14,8 +14,7 @@ function lagSidebarLagKontroller() {
         masterKnapp.className = "master-knapp";
         masterKnapp.onclick = () => {
             const pa = masterKnapp.style.backgroundColor === "green";
-            console.log(pa);
-            document.getElementsByClassName(tittel).array.forEach(button => {
+            Array.from(document.getElementsByClassName(tittel)).forEach(button => {
                 if (button.style.backgroundColor === "green") {
                     if (pa) {
                         button.click();
