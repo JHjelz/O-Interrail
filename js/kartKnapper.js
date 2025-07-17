@@ -11,11 +11,11 @@ function lagSidebarLagKontroller() {
 
         // Master toggle-knapp
         const masterKnapp = document.createElement("button");
-        //masterKnapp.textContent = "Skru av/på alle";
         masterKnapp.className = "master-knapp";
         masterKnapp.onclick = () => {
             const pa = masterKnapp.style.backgroundColor === "green";
-            document.getElementsByClassName(tittel).forEach(button => {
+            console.log(pa);
+            document.getElementsByClassName(tittel).array.forEach(button => {
                 if (button.style.backgroundColor === "green") {
                     if (pa) {
                         button.click();
