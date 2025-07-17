@@ -16,6 +16,24 @@ function lagSidebarLagKontroller() {
         //masterKnapp.textContent = "Skru av/på alle";
         masterKnapp.className = "master-knapp";
         masterKnapp.onclick = () => {
+            const pa = masterKnapp.style.backgroundColor === "green";
+            document.getElementsByClassName(tittel).array.forEach(button => {
+                if (button.style.backgroundColor === "green") {
+                    if (pa) {
+                        button.click;
+                    }
+                } else if (button.style.backgroundColor === "red") {
+                    if (!pa) {
+                        button.click;
+                    }
+                }
+            });
+            if (pa) {
+                masterKnapp.classList.add("av");
+            } else {
+                masterKnapp.classList.remove("av");
+            }
+            /*
             const paKartet = Object.values(layers)[0]._map !== null;
             Object.values(layers).forEach(layer => {
                 if (paKartet) {
@@ -26,6 +44,7 @@ function lagSidebarLagKontroller() {
                     masterKnapp.classList.remove("av");
                 }
             });
+            */
         };
 
         headerRad.appendChild(overskrift);
@@ -38,6 +57,7 @@ function lagSidebarLagKontroller() {
             const knapp = document.createElement("button");
             knapp.textContent = id;
             knapp.className = "lag-knapp";
+            knapp.classList.add(tittel);
             knapp.onclick = () => {
                 const paKartet = lag._map !== null;
                 if (paKartet) {
