@@ -14,13 +14,18 @@ function lagSidebarLagKontroller() {
         masterKnapp.className = "master-knapp";
         masterKnapp.onclick = () => {
             const pa = masterKnapp.style.backgroundColor === "green";
+            console.log(pa);
             Array.from(document.getElementsByClassName(tittel)).forEach(button => {
                 if (button.style.backgroundColor === "green") {
+                    console.log("green");
                     if (pa) {
+                        console.log("Turns of");
                         button.click();
                     }
                 } else if (button.style.backgroundColor === "red") {
+                    console.log("red");
                     if (!pa) {
+                        console.log("Turns on");
                         button.click();
                     }
                 }
