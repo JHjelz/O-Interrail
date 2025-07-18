@@ -5,7 +5,17 @@ const typeTilFarge = {
     overnatting: "#ffc107",  // Gul
     slutt: "#dc3545",        // Rød
     Tog: "#007bff",          // Blå
-    Buss: "#6f42c1"          // Lilla
+    Buss: "#6f42c1",         // Lilla
+
+    universitet: "#007bff",  // Blå
+    slott: "red",
+    skog: "green",
+    orientering: "orange",
+    gondol: "brown",
+    foss: "blue",
+    sykkelvei: "purple",
+    mat: "pink",
+    dagligvarer: "gray"
 };
 
 // Symboler for ulike egenskaper
@@ -13,7 +23,16 @@ const typeTilIkon = {
     start: 'bi-geo-alt-fill',
     stasjon: 'bi-train-front-fill',
     overnatting: 'bi-house-door-fill',
-    slutt: 'bi-flag-fill'
+    slutt: 'bi-flag-fill',
+    universitet: 'bi-mortarboard-fill',
+    slott: "bi-bank",
+    skog: 'bi-tree',
+    orientering: 'bi-person-arms-up',
+    gondol: 'bi-image-alt',
+    foss: "bi-droplet-fill",
+    sykkelvei: "bi-bicycle",
+    mat: "bi-fork-knife",
+    dagligvarer: "bi-shop"
 }
 
 const clusterGruppe = L.markerClusterGroup({
@@ -69,16 +88,36 @@ fetch('reiser.geojson')
         if (type == "Point") {
             const coords = feature.geometry.coordinates.slice();
             // Automatisk generering av rik popup
-            const popup = `
-                <strong>${props.navn}</strong><br>
-                (${coords[1].toFixed(3)}, ${coords[0].toFixed(3)})<br>
-                <table>
-                    <tr><td><b>Land:</b></td><td>${props.land || '-'}</td></tr>    
-                    <tr><td><b>Ankomst:</b></td><td>${props.ankomst || '-'}</td></tr>
-                    <tr><td><b>Avgang:</b></td><td>${props.avgang || '-'}</td></tr>
-                    <tr><td><b>Spor:</b></td><td>${props.spor || '-'}</td></tr>
-                </table>
-            `;
+            let popup = "";
+            if (props.kategori === "info") {
+                if (props.type === "orientering") {
+                    popup = `
+                        <strong>${props.navn}</strong><br>
+                        (${coords[1].toFixed(3)}, ${coords[0].toFixed(3)})<br>
+                        <table>
+                            <tr><td><b>Dato:</b></td><td>${props.dato || '-'}</td></tr>    
+                            <tr><td><b>Distanse:</b></td><td>${props.distanse || '-'}</td></tr>
+                        </table>
+                    `;
+                } else {
+                    popup = `
+                        <strong>${props.navn}</strong><br>
+                        (${coords[1].toFixed(3)}, ${coords[0].toFixed(3)})<br><br>
+                        ${props.beskrivelse || '-'}
+                    `;
+                }
+            } else {
+                popup = `
+                    <strong>${props.navn}</strong><br>
+                    (${coords[1].toFixed(3)}, ${coords[0].toFixed(3)})<br>
+                    <table>
+                        <tr><td><b>Land:</b></td><td>${props.land || '-'}</td></tr>    
+                        <tr><td><b>Ankomst:</b></td><td>${props.ankomst || '-'}</td></tr>
+                        <tr><td><b>Avgang:</b></td><td>${props.avgang || '-'}</td></tr>
+                        <tr><td><b>Spor:</b></td><td>${props.spor || '-'}</td></tr>
+                    </table>
+                `;
+            }
             const marker = L.marker(coords.reverse(), {
                 icon: lagIkon(props.type)
             }).bindPopup(popup);
@@ -96,7 +135,7 @@ fetch('reiser.geojson')
                 ${props.fremkomstmiddel}<br>
                 <table>
                 <tr><td><b>Reise-ID:</b></td><td>${props.reiseID || '-'}</td></tr>
-                <tr><td><b>Togbytter:</b></td><td>${props.bytter || '-'}</td></tr>
+                <tr><td><b>Bytter:</b></td><td>${props.bytter || '-'}</td></tr>
                 <tr><td><b>Varighet:</b></td><td>${props.varighet || '-'}</td></tr>
                 </table>
             `;

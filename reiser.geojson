@@ -574,6 +574,386 @@
           "spor": "",
           "land": "Østerrike"
         }
+      },
+
+
+
+
+
+
+      
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [15.576088019441519, 58.39826588342462]
+        },
+        "properties": {
+          "type": "universitet",
+          "kategori": "info",
+          "navn": "Linköping Universitet",
+          "beskrivelse": ""
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [15.580423780458492, 58.40958434771873]
+        },
+        "properties": {
+          "type": "skog",
+          "kategori": "info",
+          "navn": "Linköping frisbeegolfbane",
+          "beskrivelse": "Frisbeegolfbane i løpeavstand, herlig skog for DG-jogg :)"
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [10.240375002599569, 53.68037519116317]
+        },
+        "properties": {
+          "type": "slott",
+          "kategori": "info",
+          "navn": "Ahrensburg slott",
+          "beskrivelse": "Flott slott, perfekt for restjogg."
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [10.219085425632437, 53.66012745051153]
+        },
+        "properties": {
+          "type": "skog",
+          "kategori": "info",
+          "navn": "Brücke Moorwanderweg",
+          "beskrivelse": "Herlig skog med konge flytebryggesti :)"
+        }
+      },
+      
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [10.13830730701233, 53.550854634976936]
+        },
+        "properties": {
+          "type": "orientering",
+          "kategori": "info",
+          "navn": "Hamburg OL - Prolog",
+          "dato": "27.06.25",
+          "distanse": "Mellomdistanse"
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [10.171217450715082, 53.65281402837749]
+        },
+        "properties": {
+          "type": "orientering",
+          "kategori": "info",
+          "navn": "Hamburg OL - Sprint (x 2)",
+          "dato": "28.06.25",
+          "distanse": "Sprint"
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [10.171217450715082, 53.65281402837749]
+        },
+        "properties": {
+          "type": "orientering",
+          "kategori": "info",
+          "navn": "Hamburg OL - Sprint (x 2)",
+          "dato": "28.06.25",
+          "distanse": "Sprint"
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [9.972572403384644, 53.44293465045734]
+        },
+        "properties": {
+          "type": "orientering",
+          "kategori": "info",
+          "navn": "Hamburg OL - Mitteldistanz",
+          "dato": "29.06.25",
+          "distanse": "Mellomdistanse"
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [12.149378067420358, 47.836083984545]
+        },
+        "properties": {
+          "type": "badeplass",
+          "kategori": "info",
+          "navn": "Floriansee",
+          "beskrivelse": "Nydelig vann å løpe til - flere badeplasser."
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [11.249555959328267, 46.0592554718714]
+        },
+        "properties": {
+          "type": "slott",
+          "kategori": "info",
+          "navn": "Castell Valsugana",
+          "beskrivelse": "Nydelig slott over Pergine Valsugana"
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [11.234895562993028, 46.114366007832054]
+        },
+        "properties": {
+          "type": "orientering",
+          "kategori": "info",
+          "navn": "JWOC Publikumsløp",
+          "dato": "03.07.25",
+          "distanse": "Mellomdistanse"
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [11.297717238455672, 46.03584217238992]
+        },
+        "properties": {
+          "type": "slott",
+          "kategori": "info",
+          "navn": "Forte Busa Grande",
+          "beskrivelse": "Fjelltopp med et tidigere fort på toppen - 1500 m.o.h."
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [10.827779441049833, 46.22931836837327]
+        },
+        "properties": {
+          "type": "orientering",
+          "kategori": "info",
+          "navn": "5-Days O: Prolog",
+          "dato": "06.07.25",
+          "distanse": "Sprint"
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [10.836870104495958, 46.23679322587159]
+        },
+        "properties": {
+          "type": "orientering",
+          "kategori": "info",
+          "navn": "5-Days O: Stage 1 & 2",
+          "dato": "07.07.25 & 08.07.25",
+          "distanse": "Mellomdistanse"
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [10.836206980111031, 46.236695394704554]
+        },
+        "properties": {
+          "type": "gondol",
+          "kategori": "info",
+          "navn": "Cabinova Grosté",
+          "beskrivelse": "Gondolbanen opp til arena løp 3 og 4. Fra 1650 m.o.h. til 2080 m.o.h."
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [10.87593787688354, 46.22578087288987]
+        },
+        "properties": {
+          "type": "orientering",
+          "kategori": "info",
+          "navn": "5-Days O: Stage 3 & 4",
+          "dato": "09.07.25 & 11.07.25",
+          "distanse": "Langdistanse og mellomdistanse"
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [10.714457841657014, 46.17069271933341]
+        },
+        "properties": {
+          "type": "foss",
+          "kategori": "info",
+          "navn": "Cascate Nardis",
+          "beskrivelse": "Perle av en foss i Pinzolo."
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [10.758485811360337, 46.1553446210234]
+        },
+        "properties": {
+          "type": "orientering",
+          "kategori": "info",
+          "navn": "5-Days O: Stage 5",
+          "dato": "12.07.25",
+          "distanse": "Sprint"
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [10.761980471953088, 46.15922003466477]
+        },
+        "properties": {
+          "type": "mat",
+          "kategori": "info",
+          "navn": "Bavdin Pizza",
+          "beskrivelse": "Rask og enkel pizzeria"
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [10.76454661283112, 46.15814133199912]
+        },
+        "properties": {
+          "type": "mat",
+          "kategori": "info",
+          "navn": "Pizzeria All'Angelo",
+          "beskrivelse": "Pinzolos beste pizza"
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [14.334512154069428, 48.31032510526212]
+        },
+        "properties": {
+          "type": "sykkelvei",
+          "kategori": "info",
+          "navn": "Donau Radweg",
+          "beskrivelse": "Sykkelveg (og gangvei) langs Donau - ideell for løpeturer"
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [14.304900144424188, 48.259076009526375]
+        },
+        "properties": {
+          "type": "skog",
+          "kategori": "info",
+          "navn": "Wasserwald",
+          "beskrivelse": "Fin park å løpe tur i - også inngjerdet skog med Linz sitt vannverk"
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [15.331840413105999, 48.22843651598769]
+        },
+        "properties": {
+          "type": "slott",
+          "kategori": "info",
+          "navn": "Stift Melk",
+          "beskrivelse": "Barokk-katedralen i Melk - vanvittig stor, og vanvittig fin"
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [15.118552833369533, 48.36493946959434]
+        },
+        "properties": {
+          "type": "dagligvarer",
+          "kategori": "info",
+          "navn": "Nah & Frisch",
+          "beskrivelse": "Knøttliten dagligvarehandel i Gutenbrunn"
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [15.118275597230541, 48.36449702671906]
+        },
+        "properties": {
+          "type": "dagligvarer",
+          "kategori": "info",
+          "navn": "Fleischhauerei Walter Fürst",
+          "beskrivelse": "Herlig, lokal slakter i Gutenbrunn"
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [15.102885485154879, 48.363845187200454]
+        },
+        "properties": {
+          "type": "orientering",
+          "kategori": "info",
+          "navn": "Sommer Cup 2025, Gutenbrunn",
+          "dato": "17.07.25 - 20.07.25",
+          "distanse": "Mellomdistanse"
+        }
       }
     ]
   }

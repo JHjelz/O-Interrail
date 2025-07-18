@@ -23,7 +23,8 @@ const lenker = [
     "https://ogruppa.org.ntnu.no/2025/07/13/interrail-o-18/",
     "https://ogruppa.org.ntnu.no/2025/07/14/interrail-o-19/",
     "https://ogruppa.org.ntnu.no/2025/07/15/interrail-o-20/",
-    "https://ogruppa.org.ntnu.no/2025/07/16/interrail-o-21/"
+    "https://ogruppa.org.ntnu.no/2025/07/16/interrail-o-21/",
+    "https://ogruppa.org.ntnu.no/2025/07/17/interrail-o-22/"
 ];
 
 const menyContainer = document.getElementById("meny"); // Menyen det skal fylles innhold i
