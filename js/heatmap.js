@@ -31,4 +31,4 @@ const overlayMaps = {
 L.control.layers(baseMaps, overlayMaps, { position: "bottomright" }).addTo(map);
 
 // Legg til heatmap som standard hvis ønsket
-// heatLayer.addTo(map);
+heatLayer.addTo(map);
