@@ -672,21 +672,6 @@
         "type": "Feature",
         "geometry": {
           "type": "Point",
-          "coordinates": [10.171217450715082, 53.65281402837749]
-        },
-        "properties": {
-          "type": "orientering",
-          "kategori": "info",
-          "navn": "Hamburg OL - Sprint (x 2)",
-          "dato": "28.06.25",
-          "distanse": "Sprint"
-        }
-      },
-
-      {
-        "type": "Feature",
-        "geometry": {
-          "type": "Point",
           "coordinates": [9.972572403384644, 53.44293465045734]
         },
         "properties": {

@@ -1,3 +1,5 @@
+// O-INTERRAIL/js/kartKnapper.js
+
 // Funksjon som dynamisk genererer knapper for kartlag
 function lagSidebarLagKontroller() {
     const sidebarContent = document.getElementById("sidebarContent");
@@ -30,18 +32,6 @@ function lagSidebarLagKontroller() {
             } else {
                 masterKnapp.classList.remove("av");
             }
-            /*
-            const paKartet = Object.values(layers)[0]._map !== null;
-            Object.values(layers).forEach(layer => {
-                if (paKartet) {
-                    fjern(layer);
-                    masterKnapp.classList.add("av");
-                } else {
-                    leggTil(layer);
-                    masterKnapp.classList.remove("av");
-                }
-            });
-            */
         };
 
         headerRad.appendChild(overskrift);

@@ -1,4 +1,6 @@
-// Fyller høyre meny med knapper for lenker til bloggen
+// O-INTERRAIL/js/meny.js
+
+// Fyller venstre meny med knapper for lenker til bloggen
 
 // Lenker til blogginnleggene
 const lenker = [

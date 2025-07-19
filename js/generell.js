@@ -1,3 +1,5 @@
+// O-INTERRAIL/js/generell.js
+
 // Generer div
 function lagDiv(klasse, id) {
     const div = document.createElement("div");

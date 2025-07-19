@@ -1,3 +1,5 @@
+// O-INTERRAIL/js/lastData.js
+
 // Farger for ulike egenskaper (linjer / stasjoner)
 const typeTilFarge = {
     start: "#28a745",        // Grønn
@@ -35,6 +37,7 @@ const typeTilIkon = {
     dagligvarer: "bi-shop"
 }
 
+// Konstant som holder orden på clustring
 const clusterGruppe = L.markerClusterGroup({
     iconCreateFunction: function (cluster) {
         const count = cluster.getChildCount();
@@ -58,6 +61,7 @@ const clusterGruppe = L.markerClusterGroup({
 // Lagring av hvert unike objekt
 const markerLayers = {};
 const lineLayers = {};
+const geoPunkter = [];
 
 // Funksjon: hent ikon basert på type
 function lagIkon(kategori) {
@@ -75,7 +79,6 @@ function lagIkon(kategori) {
 }
 
 // Last inn GeoJSON
-
 fetch('reiser.geojson')
   .then(response => response.json())
   .then(data => {
@@ -89,8 +92,8 @@ fetch('reiser.geojson')
             const coords = feature.geometry.coordinates.slice();
             // Automatisk generering av rik popup
             let popup = "";
-            if (props.kategori === "info") {
-                if (props.type === "orientering") {
+            if (props.kategori === "info") { // Egen for info-punkt
+                if (props.type === "orientering") { // Med unik info for o-løp
                     popup = `
                         <strong>${props.navn}</strong><br>
                         (${coords[1].toFixed(3)}, ${coords[0].toFixed(3)})<br>
@@ -125,6 +128,8 @@ fetch('reiser.geojson')
             markerLayers[id] = marker;
     
             clusterGruppe.addLayer(marker);
+
+            geoPunkter.push(feature);
         }
         
         // Linjer
@@ -154,6 +159,7 @@ fetch('reiser.geojson')
     // Legger til clustering
     map.addLayer(clusterGruppe);
 
+    // Genererer knapper for de ulike
     lagSidebarLagKontroller();
   })
-  .catch(error => console.error('Klarte ikke å laste GeoJSON:', error));
+  .catch(error => console.error('Klarte ikke å laste GeoJSON:', error)); // Feilmelding hvis feil

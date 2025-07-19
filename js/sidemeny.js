@@ -1,3 +1,5 @@
+// O-INTERRAIL/js/sidemeny.js
+
 // Funksjonalitet for å åpne sidemenyen i kartet
 
 let menyOpen = false; // Er den åpen eller ikke?
