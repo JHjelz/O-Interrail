@@ -8,6 +8,7 @@ const typeTilFarge = {
     slutt: "#dc3545",        // Rød
     Tog: "#007bff",          // Blå
     Buss: "#6f42c1",         // Lilla
+    Ferje: "pink",
 
     universitet: "#007bff",  // Blå
     slott: "red",
@@ -17,7 +18,8 @@ const typeTilFarge = {
     foss: "blue",
     sykkelvei: "purple",
     mat: "pink",
-    dagligvarer: "gray"
+    dagligvarer: "gray",
+    grotte: "black"
 };
 
 // Symboler for ulike egenskaper
@@ -34,7 +36,8 @@ const typeTilIkon = {
     foss: "bi-droplet-fill",
     sykkelvei: "bi-bicycle",
     mat: "bi-fork-knife",
-    dagligvarer: "bi-shop"
+    dagligvarer: "bi-shop",
+    grotte: "bi-signpost-split"
 }
 
 // Konstant som holder orden på clustring
@@ -61,7 +64,6 @@ const clusterGruppe = L.markerClusterGroup({
 // Lagring av hvert unike objekt
 const markerLayers = {};
 const lineLayers = {};
-const geoPunkter = [];
 
 // Funksjon: hent ikon basert på type
 function lagIkon(kategori) {
@@ -128,8 +130,6 @@ fetch('reiser.geojson')
             markerLayers[id] = marker;
     
             clusterGruppe.addLayer(marker);
-
-            geoPunkter.push(feature);
         }
         
         // Linjer

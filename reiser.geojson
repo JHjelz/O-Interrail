@@ -195,6 +195,139 @@
       {
         "type": "Feature",
         "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [15.119522451789466, 48.36683128227006], [15.330843424305916, 48.2247415923573]
+          ]
+        },
+        "properties": {
+          "type": "reise",
+          "navn": "Gutenbrunn til Melk",
+          "fremkomstmiddel": "Buss",
+          "reiseID": "R008.1",
+          "dato": "21.07.25",
+          "bytter": 0,
+          "varighet": "1 h, 3 min"
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [15.330843424305916, 48.2247415923573], [15.62463645740193, 48.20802994007106], [16.376553327125357, 48.18527907557232], [19.08398460696989, 47.500438535128346], [21.26748390809287, 48.72268322547197], [20.513612882566356, 48.63550789259028]
+          ]
+        },
+        "properties": {
+          "type": "reise",
+          "navn": "Melk til Roznava",
+          "fremkomstmiddel": "Tog",
+          "reiseID": "R008.2",
+          "dato": "21.07.25",
+          "bytter": 4,
+          "varighet": "8 h, 5 min"
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [20.53505455895995, 48.66037770033503], [20.46646902620386, 48.587577655789524]
+          ]
+        },
+        "properties": {
+          "type": "reise",
+          "navn": "Roznava til Slavec",
+          "fremkomstmiddel": "Buss",
+          "reiseID": "R009",
+          "dato": "22.07.25",
+          "bytter": 0,
+          "varighet": "20 min"
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [20.513612882566356, 48.63550789259028], [21.26748390809287, 48.72268322547197], [18.327914846989028, 49.11393533491046], [14.434907757721636, 50.08399351980774]
+          ]
+        },
+        "properties": {
+          "type": "reise",
+          "navn": "Roznava til Praha",
+          "fremkomstmiddel": "Tog",
+          "reiseID": "R010",
+          "dato": "28.07.25",
+          "bytter": 2,
+          "varighet": "10 h 2 min"
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [14.434907757721636, 50.08399351980774], [13.365145186631953, 52.476143547926576], [10.006776328870789, 53.553103210939014], [9.934960027225056, 53.55236527254604], [12.564815787836002, 55.67279848164231]
+          ]
+        },
+        "properties": {
+          "type": "reise",
+          "navn": "Praha til København",
+          "fremkomstmiddel": "Tog",
+          "reiseID": "R011",
+          "dato": "29.07.25",
+          "bytter": 3,
+          "varighet": "11 h 48 min"
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [12.564815787836002, 55.67279848164231], [11.972899814151102, 57.70922224724433], [10.65737767435976, 59.431998003166235]
+          ]
+        },
+        "properties": {
+          "type": "reise",
+          "navn": "København til Moss",
+          "fremkomstmiddel": "Tog",
+          "reiseID": "R012.1",
+          "dato": "30.07.25",
+          "bytter": 1,
+          "varighet": "6 h 43 min"
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [10.654657470211383, 59.429939373268596], [10.488425173338637, 59.41207112930527]
+          ]
+        },
+        "properties": {
+          "type": "reise",
+          "navn": "Moss til Horten",
+          "fremkomstmiddel": "Ferje",
+          "reiseID": "R012.2",
+          "dato": "30.07.25",
+          "bytter": 0,
+          "varighet": "30 min"
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
           "type": "Point",
           "coordinates": [10.39818647605795, 63.436237558235916]
         },
@@ -297,8 +430,8 @@
         "properties": {
           "type": "stasjon",
           "navn": "København H",
-          "ankomst": "13:27",
-          "avgang": "14:22",
+          "ankomst": "13:27, 00:19",
+          "avgang": "14:22, 09:30",
           "spor": "5",
           "land": "Danmark"
         }
@@ -313,9 +446,9 @@
         "properties": {
           "type": "stasjon",
           "navn": "Hamburg Hbf",
-          "ankomst": "19:00, 09:48",
-          "avgang": "19:11, 10:01",
-          "spor": "11, 6A-C, 6D-F, 14",
+          "ankomst": "19:00, 09:48, 15:36",
+          "avgang": "19:11, 10:01, 17:28",
+          "spor": "11, 6A-C, 6D-F, 14, 11, 1",
           "land": "Tyskland"
         }
       },
@@ -573,6 +706,246 @@
           "avgang": "",
           "spor": "",
           "land": "Østerrike"
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [15.62463645740193, 48.20802994007106]
+        },
+        "properties": {
+          "type": "stasjon",
+          "navn": "St. Poelten Hbf",
+          "ankomst": "06:58",
+          "avgang": "07:03",
+          "spor": "2D-F, 3",
+          "land": "Østerrike"
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [16.376553327125357, 48.18527907557232]
+        },
+        "properties": {
+          "type": "stasjon",
+          "navn": "Wien Hbf",
+          "ankomst": "07:32",
+          "avgang": "08:42",
+          "spor": "10A-B, 10C-E",
+          "land": "Østerrike"
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [19.08398460696989, 47.500438535128346]
+        },
+        "properties": {
+          "type": "stasjon",
+          "navn": "Budapest-Keleti",
+          "ankomst": "11:19",
+          "avgang": "12:25",
+          "spor": "",
+          "land": "Ungarn"
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [21.26748390809287, 48.72268322547197]
+        },
+        "properties": {
+          "type": "stasjon",
+          "navn": "Kosice",
+          "ankomst": "16:14, 08:44",
+          "avgang": "17:22, 09:07",
+          "spor": "",
+          "land": "Slovakia"
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [20.513612882566356, 48.63550789259028]
+        },
+        "properties": {
+          "type": "stasjon",
+          "navn": "Roznava",
+          "ankomst": "18:15",
+          "avgang": "07:48",
+          "spor": "",
+          "land": "Slovakia"
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [20.53505455895995, 48.66037770033503]
+        },
+        "properties": {
+          "type": "stasjon",
+          "navn": "Roznava buss-sentral",
+          "ankomst": "",
+          "avgang": "",
+          "spor": "",
+          "land": "Slovakia"
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [20.46646902620386, 48.587577655789524]
+        },
+        "properties": {
+          "type": "stasjon",
+          "navn": "Slavec buss-stopp",
+          "ankomst": "",
+          "avgang": "",
+          "spor": "",
+          "land": "Slovakia"
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [18.327914846989028, 49.11393533491046]
+        },
+        "properties": {
+          "type": "stasjon",
+          "navn": "Puchov",
+          "ankomst": "13:02",
+          "avgang": "13:25",
+          "spor": "",
+          "land": "Slovakia"
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [14.434907757721636, 50.08399351980774]
+        },
+        "properties": {
+          "type": "overnatting",
+          "navn": "Prague Hlavni Nadrazi",
+          "ankomst": "18:36",
+          "avgang": "08:28",
+          "spor": "",
+          "land": "Tsjekkia"
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [13.365145186631953, 52.476143547926576]
+        },
+        "properties": {
+          "type": "stasjon",
+          "navn": "Berlin Südkreuz",
+          "ankomst": "12:36",
+          "avgang": "13:24",
+          "spor": "8",
+          "land": "Tyskland"
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [9.934960027225056, 53.55236527254604]
+        },
+        "properties": {
+          "type": "stasjon",
+          "navn": "Hamburg-Altona",
+          "ankomst": "17:40",
+          "avgang": "19:03",
+          "spor": "4, 5",
+          "land": "Tyskland"
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [11.972899814151102, 57.70922224724433]
+        },
+        "properties": {
+          "type": "stasjon",
+          "navn": "Gøteborg C",
+          "ankomst": "13:20",
+          "avgang": "14:15",
+          "spor": "4",
+          "land": "Sverige"
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [10.65737767435976, 59.431998003166235]
+        },
+        "properties": {
+          "type": "stasjon",
+          "navn": "Moss",
+          "ankomst": "17:08",
+          "avgang": "",
+          "spor": "1",
+          "land": "Norge"
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [10.654657470211383, 59.429939373268596]
+        },
+        "properties": {
+          "type": "stasjon",
+          "navn": "Moss ferjekai",
+          "ankomst": "",
+          "avgang": "",
+          "spor": "",
+          "land": "Norge"
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [10.488425173338637, 59.41207112930527]
+        },
+        "properties": {
+          "type": "slutt",
+          "navn": "Horten ferjekai",
+          "ankomst": "",
+          "avgang": "",
+          "spor": "",
+          "land": "Norge"
         }
       },
 
@@ -938,6 +1311,119 @@
           "navn": "Sommer Cup 2025, Gutenbrunn",
           "dato": "17.07.25 - 20.07.25",
           "distanse": "Mellomdistanse"
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [20.467555481658746, 48.58727174779452]
+        },
+        "properties": {
+          "type": "overnatting",
+          "kategori": "info",
+          "navn": "Milans hule",
+          "beskrivelse": "Verdens beste vert, Milan og kona serverer et luksus-opphold for sine gjester! 8) Drev også liten butikk med is, drikke og små-nafs - ultra lokal, åpen når han er hjemme og våken, og alle i landsbyen kommer dit"
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [20.503512750610724, 48.54899950520355]
+        },
+        "properties": {
+          "type": "grotte",
+          "kategori": "info",
+          "navn": "Silicka L'adnica",
+          "beskrivelse": "En enorm og fantastisk isgrotte som holder 0 grader hele året."
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [20.466540490021025, 48.56278430881397]
+        },
+        "properties": {
+          "type": "grotte",
+          "kategori": "info",
+          "navn": "Gombasek jaskyna",
+          "beskrivelse": "Ungarsk festivalområde med stalagmitt-grotte som tilbyr guidet tur. En av Slovakias store grotter og turistattraksjoner."
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [20.43081309911889, 48.59749222901744]
+        },
+        "properties": {
+          "type": "skog",
+          "kategori": "info",
+          "navn": "Ratkova",
+          "beskrivelse": "Nydelig karstlandskap med store groper - enormt kult orienteringsområde! Del av naturområdet Narodny Park Slovensky Kras."
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [20.52276449069383, 48.55552518703487]
+        },
+        "properties": {
+          "type": "dagligvarer",
+          "kategori": "info",
+          "navn": "Silica",
+          "beskrivelse": "Knøttliten, søt landsby like ved arena"
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [20.466294686178525, 48.58342965115758]
+        },
+        "properties": {
+          "type": "dagligvarer",
+          "kategori": "info",
+          "navn": "Coop Jednota",
+          "beskrivelse": "Knøttliten dagligvarehandel som nok fungerte som kiosk. Ikke brød, og kun pasta med bønner som middagsalternativ. Åpent 07:30-12:00 og 12:30 - 15:30."
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [20.501828108074342, 48.56434068452541]
+        },
+        "properties": {
+          "type": "orientering",
+          "kategori": "info",
+          "navn": "Slovak Karst Cup 2025",
+          "dato": "25.07.25 - 27.07.25",
+          "distanse": "Kort langdistanse og mellomdistanse"
+        }
+      },
+
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [12.562680099292109, 55.67282134231647]
+        },
+        "properties": {
+          "type": "overnatting",
+          "kategori": "info",
+          "navn": "Where to sleep...",
+          "beskrivelse": "Backpacker Hostel vegg i vegg med København H :)"
         }
       }
     ]
