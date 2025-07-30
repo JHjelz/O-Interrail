@@ -26,7 +26,17 @@ const lenker = [
     "https://ogruppa.org.ntnu.no/2025/07/14/interrail-o-19/",
     "https://ogruppa.org.ntnu.no/2025/07/15/interrail-o-20/",
     "https://ogruppa.org.ntnu.no/2025/07/16/interrail-o-21/",
-    "https://ogruppa.org.ntnu.no/2025/07/17/interrail-o-22/"
+    "https://ogruppa.org.ntnu.no/2025/07/17/interrail-o-22/",
+    "https://ogruppa.org.ntnu.no/2025/07/18/interrail-o-23/",
+    "https://ogruppa.org.ntnu.no/2025/07/19/interrail-o-24/",
+    "https://ogruppa.org.ntnu.no/2025/07/20/interrail-o-25/",
+    "https://ogruppa.org.ntnu.no/2025/07/21/interrail-o-26/",
+    "https://ogruppa.org.ntnu.no/2025/07/22/interrail-o-27/",
+    "https://ogruppa.org.ntnu.no/2025/07/23/interrail-o-28/",
+    "https://ogruppa.org.ntnu.no/2025/07/24/interrail-o-29/",
+    "https://ogruppa.org.ntnu.no/2025/07/26/interrail-o-30/",
+    "https://ogruppa.org.ntnu.no/2025/07/26/interrail-o-31/",
+    "https://ogruppa.org.ntnu.no/2025/07/28/interrail-o-32-finale/"
 ];
 
 const menyContainer = document.getElementById("meny"); // Menyen det skal fylles innhold i
