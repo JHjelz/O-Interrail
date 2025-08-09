@@ -13,7 +13,7 @@ const typeTilFarge = {
     universitet: "#007bff",  // Blå
     slott: "red",
     skog: "green",
-    //orientering: "orange",
+    badeplass: "blue",
     gondol: "brown",
     foss: "blue",
     sykkelvei: "purple",
@@ -31,7 +31,7 @@ const typeTilIkon = {
     universitet: 'bi-mortarboard-fill',
     slott: "bi-bank",
     skog: 'bi-tree',
-    //orientering: 'bi-person-arms-up',
+    badeplass: 'bi-water',
     gondol: 'bi-image-alt',
     foss: "bi-droplet-fill",
     sykkelvei: "bi-bicycle",
