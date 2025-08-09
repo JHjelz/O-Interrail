@@ -13,7 +13,7 @@ const typeTilFarge = {
     universitet: "#007bff",  // Blå
     slott: "red",
     skog: "green",
-    orientering: "orange",
+    //orientering: "orange",
     gondol: "brown",
     foss: "blue",
     sykkelvei: "purple",
@@ -31,7 +31,7 @@ const typeTilIkon = {
     universitet: 'bi-mortarboard-fill',
     slott: "bi-bank",
     skog: 'bi-tree',
-    orientering: 'bi-person-arms-up',
+    //orientering: 'bi-person-arms-up',
     gondol: 'bi-image-alt',
     foss: "bi-droplet-fill",
     sykkelvei: "bi-bicycle",
@@ -67,6 +67,14 @@ const lineLayers = {};
 
 // Funksjon: hent ikon basert på type
 function lagIkon(kategori) {
+    if (kategori === "orientering") {
+        return L.icon({
+            iconUrl: "Orienteringspost.png", // Filen din i samme mappe
+            iconSize: [50, 50],              // Tilpass til bildet ditt
+            iconAnchor: [25, 50],            // Senter bunnpunkt
+            popupAnchor: [0, -40]
+        });
+    }
     const farge = typeTilFarge[kategori] || "gray";
     const ikon = typeTilIkon[kategori] || "bi-pin-map";
     return L.divIcon({
