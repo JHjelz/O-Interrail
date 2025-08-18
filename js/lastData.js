@@ -69,9 +69,9 @@ const lineLayers = {};
 function lagIkon(kategori) {
     if (kategori === "orientering") {
         return L.icon({
-            iconUrl: "Orienteringspost.png", // Filen din i samme mappe
-            iconSize: [50, 50],              // Tilpass til bildet ditt
-            iconAnchor: [25, 50],            // Senter bunnpunkt
+            iconUrl: "Orienteringspost.png",
+            iconSize: [50, 50],
+            iconAnchor: [25, 50],
             popupAnchor: [0, -40]
         });
     }
