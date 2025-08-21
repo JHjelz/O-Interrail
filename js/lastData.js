@@ -158,7 +158,10 @@ fetch('reiser.geojson')
             try {
                 // Hvis linjen har minst 3 punkter → smooth
                 if (feature.geometry.coordinates.length >= 3) {
-                    const smoothed = turf.bezierSpline(feature);
+                    const smoothed = turf.bezierSpline(feature, {
+                        resolution: 10000, // standard er 10000
+                        sharpness: 0.2     // lavere verdi = glattere, mindre «sløyfer»
+                    });
                     linje = L.geoJSON(smoothed, {
                         style: {
                             color: typeTilFarge[props.fremkomstmiddel],
@@ -188,13 +191,7 @@ fetch('reiser.geojson')
                     }
                 );
             }
-
-            /*const linje = L.polyline(feature.geometry.coordinates.map(coord => coord.slice().reverse()), {
-                color: typeTilFarge[props.fremkomstmiddel],
-                weight: 4,
-                opacity: 0.7
-            }).bindPopup(popup);*/
-
+            
             linje.bindPopup(popup);
             lineLayers[id] = linje;
             linje.addTo(map);
