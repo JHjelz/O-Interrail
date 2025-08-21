@@ -152,14 +152,51 @@ fetch('reiser.geojson')
                 <tr><td><b>Varighet:</b></td><td>${props.varighet || '-'}</td></tr>
                 </table>
             `;
-            const linje = L.polyline(feature.geometry.coordinates.map(coord => coord.slice().reverse()), {
+
+            let linje;
+
+            try {
+                // Hvis linjen har minst 3 punkter → smooth
+                if (feature.geometry.coordinates.length >= 3) {
+                    const smoothed = turf.bezierSpline(feature);
+                    linje = L.geoJSON(smoothed, {
+                        style: {
+                            color: typeTilFarge[props.fremkomstmiddel],
+                            weight: 4,
+                            opacity: 0.7
+                        }
+                    });
+                } else {
+                    // Fallback: vanlig polyline (to punkter)
+                    linje = L.polyline(
+                        feature.geometry.coordinates.map(coord => coord.slice().reverse()),
+                        {
+                            color: typeTilFarge[props.fremkomstmiddel],
+                            weight: 4,
+                            opacity: 0.7
+                        }
+                    );
+                }
+            } catch (err) {
+                console.warn("Feil ved smoothing, faller tilbake til vanlig linje:", err);
+                linje = L.polyline(
+                    feature.geometry.coordinates.map(coord => coord.slice().reverse()),
+                    {
+                        color: typeTilFarge[props.fremkomstmiddel],
+                        weight: 4,
+                        opacity: 0.7
+                    }
+                );
+            }
+
+            /*const linje = L.polyline(feature.geometry.coordinates.map(coord => coord.slice().reverse()), {
                 color: typeTilFarge[props.fremkomstmiddel],
                 weight: 4,
                 opacity: 0.7
-            }).bindPopup(popup);
+            }).bindPopup(popup);*/
 
+            linje.bindPopup(popup);
             lineLayers[id] = linje;
-
             linje.addTo(map);
         }
     });
