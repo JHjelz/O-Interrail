@@ -4,7 +4,7 @@
 function lagSidebarLagKontroller() {
     const sidebarContent = document.getElementById("sidebarContent");
 
-    const lagSektion = (tittel, layers, leggTil, fjern) => {
+    const lagSektion = (tittel, layers, leggTil, fjern, alltidPaaKartet = false) => {
         const seksjon = lagDiv("sidebar-section");
         const headerRad = lagDiv("seksjon-header");
 
@@ -45,8 +45,11 @@ function lagSidebarLagKontroller() {
             knapp.textContent = id;
             knapp.className = "lag-knapp";
             knapp.classList.add(tittel);
+
+            leggTil(lag); // Start-tilstand
+
             knapp.onclick = () => {
-                const paKartet = lag._map !== null;
+                const paKartet = alltidPaaKartet ? clusterGruppe.hasLayer(lag) : (lag._map !== null);
                 if (paKartet) {
                     fjern(lag);
                     knapp.classList.add("av");
@@ -62,6 +65,13 @@ function lagSidebarLagKontroller() {
         seksjon.appendChild(knappContainer);
 
         sidebarContent.appendChild(seksjon);
+
+        // Hvis laget skal alltid være på kartet (f.eks. clusterGruppe), legg det til
+        if (alltidPaaKartet) {
+            if (!map.hasLayer(clusterGruppe)) {
+                map.addLayer(clusterGruppe);
+            }
+        }
     };
 
     // Lag linje-seksjon
@@ -73,6 +83,7 @@ function lagSidebarLagKontroller() {
     // Lag punkt-seksjon (via cluster)
     lagSektion("Steder", markerLayers,
         lag => clusterGruppe.addLayer(lag),
-        lag => clusterGruppe.removeLayer(lag)
+        lag => clusterGruppe.removeLayer(lag),
+        true
     );
 }

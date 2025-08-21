@@ -160,7 +160,7 @@ fetch('reiser.geojson')
                 if (feature.geometry.coordinates.length >= 3) {
                     const smoothed = turf.bezierSpline(feature, {
                         resolution: 10000, // standard er 10000
-                        sharpness: 0.2     // lavere verdi = glattere, mindre «sløyfer»
+                        sharpness: 0.4     // lavere verdi = glattere, mindre «sløyfer»
                     });
                     linje = L.geoJSON(smoothed, {
                         style: {
@@ -191,7 +191,7 @@ fetch('reiser.geojson')
                     }
                 );
             }
-            
+
             linje.bindPopup(popup);
             lineLayers[id] = linje;
             linje.addTo(map);
