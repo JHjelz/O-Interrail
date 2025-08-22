@@ -109,14 +109,14 @@ body {
 }
 
 .blogg-knapp img.ikon {
-    width: 9vh;
-    height: 9vh;
+    width: 4vh;
+    height: 4vh;
     filter: invert(100%)
 }
 
 .blogg-knapp.siste img.ikon {
-    width: 9vh;
-    height: 9vh;
+    width: 4vh;
+    height: 4vh;
     filter: invert(100%);
 }
 
@@ -206,6 +206,19 @@ body {
     margin: 0;
 }
 
+.lag-rad {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.lag-navn {
+    font-size: 2vh;
+    color: white;
+}
+
 .knappContainer {
     height: calc((72vh - 20px) / 2 - 8vh);
     overflow-y: scroll;
@@ -216,18 +229,14 @@ body {
     margin-top: 5px;
     margin-bottom: 5px;
     background-color: green;
-    color: white;
-    font-size: 2vh;
     border: white;
     border-width: 2px;
     border-radius: 5px;
     cursor: pointer;
-    text-align: left;
 }
 
 .lag-knapp.av {
     opacity: 0.5;
-    text-decoration: line-through;
     background-color: red;
 }
 

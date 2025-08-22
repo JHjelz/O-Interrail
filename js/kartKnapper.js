@@ -41,8 +41,13 @@ function lagSidebarLagKontroller() {
 
         // En knapp per element
         for (const [id, lag] of Object.entries(layers)) {
+            const rad = lagDiv("lag-rad");
+            
+            const navn = document.createElement("span");
+            navn.textContent = id;
+            navn.className = "lag-navn";
+
             const knapp = document.createElement("button");
-            knapp.textContent = id;
             knapp.className = "lag-knapp";
             knapp.classList.add(tittel);
 
@@ -58,7 +63,9 @@ function lagSidebarLagKontroller() {
                     knapp.classList.remove("av");
                 }
             };
-            knappContainer.appendChild(knapp);
+            rad.appendChild(navn);
+            rad.appendChild(knapp)
+            knappContainer.appendChild(rad);
         }
 
         seksjon.appendChild(headerRad);
