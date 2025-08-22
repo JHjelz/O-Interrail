@@ -108,16 +108,16 @@ body {
     background-color: blue;
 }
 
-.blogg-knapp.ikon {
-    width: 20px;
-    height: 20px;
-    color: white;
+.blogg-knapp img.ikon {
+    width: 4px;
+    height: 4px;
+    filter: invert(100%)
 }
 
-.blogg-knapp.siste.ikon {
-    width: 20px;
-    height: 20px;
-    color: white;
+.blogg-knapp.siste img.ikon {
+    width: 4px;
+    height: 4px;
+    filter: invert(100%);
 }
 
 .leaflet-bootstrap-icon .custom-marker {
