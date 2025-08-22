@@ -226,6 +226,8 @@ body {
 
 .lag-knapp {
     display: block;
+    height: 2vh;
+    width: 2vh;
     margin-top: 5px;
     margin-bottom: 5px;
     background-color: green;
