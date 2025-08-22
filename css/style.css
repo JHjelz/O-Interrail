@@ -108,15 +108,17 @@ body {
     background-color: blue;
 }
 
-.blogg-knapp.ikon {
-    width: 4px;
-    height: 4px;
+.blogg-knapp img.ikon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
     filter: invert(100%)
 }
 
-.blogg-knapp.siste.ikon {
-    width: 4px;
-    height: 4px;
+.blogg-knapp.siste img.ikon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
     filter: invert(100%);
 }
 
