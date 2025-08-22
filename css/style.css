@@ -108,13 +108,13 @@ body {
     background-color: blue;
 }
 
-.blogg-knapp img.ikon {
+.blogg-knapp.ikon {
     width: 4px;
     height: 4px;
     filter: invert(100%)
 }
 
-.blogg-knapp.siste img.ikon {
+.blogg-knapp.siste.ikon {
     width: 4px;
     height: 4px;
     filter: invert(100%);
