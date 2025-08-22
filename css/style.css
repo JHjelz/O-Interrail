@@ -109,16 +109,14 @@ body {
 }
 
 .blogg-knapp img.ikon {
-    width: 20px;
-    height: 20px;
-    margin-right: 8px;
+    width: 9vh;
+    height: 9vh;
     filter: invert(100%)
 }
 
 .blogg-knapp.siste img.ikon {
-    width: 20px;
-    height: 20px;
-    margin-right: 8px;
+    width: 9vh;
+    height: 9vh;
     filter: invert(100%);
 }
 
