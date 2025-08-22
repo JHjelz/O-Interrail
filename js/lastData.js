@@ -40,22 +40,42 @@ const typeTilIkon = {
     grotte: "bi-signpost-split"
 }
 
+// Funksjon for å hente heatmap-farger
+function clusterColor(count) {
+    const max = 20;
+    const ratio = Math.min(count / max, 1); // 0 -> 1
+
+    // Interpoler mellom grønn -> gul -> rød
+    let r, g, b;
+    if (ratio < 0.5) {
+        // Grønn -> Gul
+        const t = ratio / 0.5;
+        r = Math.round(56 + t * (248 - 56));
+        g = Math.round(176 + t * (208 - 176));
+        b = Math.round(0 + t * (0 - 0));
+    } else {
+        // Gul -> Rød
+        const t = (ratio - 0.5) / 0.5;
+        r = Math.round(248 + t * (208 - 248));
+        g = Math.round(208 + t * (0 - 208));
+        b = Math.round(0 + t * (0 - 0));
+    }
+
+    return `rgb(${r},${g},${b})`;
+}
+
+
 // Konstant som holder orden på clustring
 const clusterGruppe = L.markerClusterGroup({
     iconCreateFunction: function (cluster) {
         const count = cluster.getChildCount();
         // Fargelegging basert på antall objekter i klyngen
-        let c = ' marker-cluster-smal';
-        if (count < 3) {
-            c = ' marker-cluster-green';
-        } else if (count < 6) {
-            c = ' marker-cluster-orange';
-        } else {
-            c = ' marker-cluster-red';
-        }
+        const color = clusterColor(count);
+        // Størrelse på blokken
+        const size = Math.min(40 + count * 2, 80); // 40 px standard, maks 80px
         return new L.DivIcon({
-            html: `<div><span>${count}</span></div>`,
-            className: 'marker-cluster' + c,
+            html: `<div style="background-color:${color}; width:${size}px; height:${size}px; line-height:${size}px"><span>${count}</span></div>`,
+            className: 'marker-cluster',
             iconSize: new L.Point(40, 40)
         });
     }

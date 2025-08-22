@@ -47,6 +47,7 @@ const togIkoner = [
     "icons/train4.svg",
     "icons/train5.svg",
     "icons/train6.svg",
+    "icons/train7.svg"
 ];
 
 const menyContainer = document.getElementById("meny"); // Menyen det skal fylles innhold i
