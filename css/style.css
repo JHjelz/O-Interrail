@@ -212,6 +212,7 @@ body {
     align-items: center;
     margin-top: 5px;
     margin-bottom: 5px;
+    margin-right: 10px;
 }
 
 .lag-navn {
@@ -231,15 +232,16 @@ body {
     margin-top: 5px;
     margin-bottom: 5px;
     background-color: green;
-    border: white;
-    border-width: 2px;
+    border-color: white;
+    border-width: 5px;
     border-radius: 5px;
     cursor: pointer;
 }
 
 .lag-knapp.av {
     opacity: 0.5;
-    background-color: red;
+    background-color: white;
+    border-color: black;
 }
 
 .lag-knapp.Linjer {
