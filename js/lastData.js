@@ -74,7 +74,7 @@ const clusterGruppe = L.markerClusterGroup({
         // Størrelse på blokken
         const size = Math.min(40 + count * 2, 80); // 40 px standard, maks 80px
         return new L.DivIcon({
-            html: `<div style="background-color:${color}; width:${size}px; height:${size}px; line-height:${size}px"><span>${count}</span></div>`,
+            html: `<div style="background-color:${color}; width:${size}px; height:${size}px; border-radius:${size*0.5}px; line-height:${size}px"><span>${count}</span></div>`,
             className: 'marker-cluster',
             iconSize: new L.Point(40, 40)
         });
