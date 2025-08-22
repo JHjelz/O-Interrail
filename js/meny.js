@@ -39,6 +39,16 @@ const lenker = [
     "https://ogruppa.org.ntnu.no/2025/07/28/interrail-o-32-finale/"
 ];
 
+// Kule tog-ikoner
+const togIkoner = [
+    "icons/train1.svg",
+    "icons/train2.svg",
+    "icons/train3.svg",
+    "icons/train4.svg",
+    "icons/train5.svg",
+    "icons/train6.svg",
+];
+
 const menyContainer = document.getElementById("meny"); // Menyen det skal fylles innhold i
 
 const topNews = lagDiv("menyDiv"); // Siste blogg-innlegg
@@ -64,6 +74,12 @@ for (let i = 0; i < lenker.length; i++) {
         klasse,
         () => window.open(url, "_blank") // Gjør at siden åpnes i ny fane
     );
+    const ikonURL = togIkoner[Math.floor(Math.random() * togIkoner.length)];
+    const ikon = document.createElement("img");
+    ikon.src = ikonURL;
+    ikon.alt = "tog-ikon";
+    ikon.className = "ikon";
+    knapp.prepend(ikon);
     if (i == lenker.length - 1) {
         topNews.appendChild(knapp);
     } else {
