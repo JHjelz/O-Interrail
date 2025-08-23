@@ -32,29 +32,77 @@ body {
 
 #intro {
   position: fixed;
-  inset: 0; /* dekker hele skjermen */
-  background: #111; /* valgfri bakgrunn */
+  inset: 0;
+  background: #1b3a1b;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   overflow: hidden;
   z-index: 9999;
 }
 
-#train {
-  width: 200px;
-  animation: drive 3s linear forwards;
+#intro .background {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, #204d20, #0f260f);
+    z-index: 0;
 }
 
-@keyframes drive {
-  0% {
-    transform: translateX(-250px);
-  }
-  100% {
-    transform: translateX(110vw);
-  }
+/* Tog */
+.train {
+  position: absolute;
+  width: 180px;
+  z-index: 2;
 }
 
+.train-left {
+  bottom: 20%;
+  left: -250px;
+  animation: driveRight 3s linear forwards;
+}
+
+.train-right {
+  top: 30%;
+  right: -250px;
+  transform: scaleX(-1); /* speilvendt */
+  animation: driveLeft 3.5s linear forwards 0.6s;
+}
+
+.train-diagonal {
+  bottom: -200px;
+  left: -250px;
+  animation: driveDiagonal 4s linear forwards 1.2s;
+}
+
+/* Tog-animasjoner */
+@keyframes driveRight {
+  from { transform: translateX(0); }
+  to { transform: translateX(120vw); }
+}
+
+@keyframes driveLeft {
+  from { transform: translateX(0) scaleX(-1); }
+  to { transform: translateX(-120vw) scaleX(-1); }
+}
+
+@keyframes driveDiagonal {
+  from { transform: translate(0, 0); }
+  to { transform: translate(120vw, -120vh); }
+}
+
+/* Orienteringsposter */
+.flag {
+  position: absolute;
+  top: -50px;
+  width: 40px;
+  animation: fall 5s linear forwards;
+  z-index: 3;
+}
+
+@keyframes fall {
+  0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
+}
 
 #map {
     height: 80vh;
