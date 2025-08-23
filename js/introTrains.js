@@ -30,6 +30,12 @@ document.addEventListener("DOMContentLoaded", () =>{
                 setTimeout(() => {
                     intro.style.display = "none";
                     content.style.display = "block";
+                    setTimeout(() => {
+                        if (window.map) {
+                            map.invalidateSize();
+                            map.setView([55.5, 11.5], 4);
+                        }
+                    }, 200);
                 }, 1000);
             }
         });

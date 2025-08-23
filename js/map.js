@@ -1,7 +1,7 @@
 // O-INTERRAIL/js/map.js
 
 // Opprett kartet
-const map = L.map('map', { zoomControl: false }).setView([55.5, 11.5], 4);
+window.map = L.map('map', { zoomControl: false }).setView([55.5, 11.5], 4);
 
 // Legger til zoom
 L.control.zoom({ position: 'bottomright' }).addTo(map);
