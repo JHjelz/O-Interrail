@@ -49,7 +49,7 @@ function lagSidebarLagKontroller() {
 
             const zoomKnapp = document.createElement("button");
             zoomKnapp.className = "zoom-knapp";
-            zoomKnapp.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/></svg>';
+            zoomKnapp.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-search" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/></svg>';
 
             const knapp = document.createElement("button");
             knapp.className = "lag-knapp";
@@ -62,7 +62,7 @@ function lagSidebarLagKontroller() {
                 if (lyr instanceof L.Polyline) return true;
                 if (lyr instanceof L.GeoJSON) {
                     let harLinje = false;
-                    lyr.forEach(l => { if (l instanceof L.Polyline) harLinje = true; });
+                    lyr.eachLayer(l => { if (l instanceof L.Polyline) harLinje = true; });
                     return harLinje;
                 }
                 return false;
@@ -71,12 +71,14 @@ function lagSidebarLagKontroller() {
             const paKartet = alltidPaaKartet ? clusterGruppe.hasLayer(lag) : (lag._map !== null);
 
             zoomKnapp.onclick = () => {
-                if (!paKartet) leggTil();
+                if (!paKartet) leggTil(lag);
                 if (typeof lag.getBounds === "function") {
                     const b = lag.getBounds();
                     if (b && b.isValid && b.isValid()) {
                         map.fitBounds(b, { padding: [20, 20], maxZoom: 12 });
                     }
+                } else if (typeof lag.getLatLng === "function") {
+                    map.setView(lag.getLatLng(), 12);
                 }
                 const startSnake = (lyr) => {
                     if (typeof lyr.snakeIn === "function") {
@@ -88,7 +90,7 @@ function lagSidebarLagKontroller() {
                 };
                 if (erLinje(lag)) {
                     if (lag instanceof L.GeoJSON) {
-                        lag.forEach(l => { if (l instanceof L.Polyline) startSnake(l); });
+                        lag.eachLayer(l => { if (l instanceof L.Polyline) startSnake(l); });
                     } else {
                         startSnake(lag);
                     }
