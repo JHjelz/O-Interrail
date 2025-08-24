@@ -70,7 +70,10 @@ function lagSidebarLagKontroller() {
 
             zoomKnapp.onclick = () => {
                 const paKartet = alltidPaaKartet ? clusterGruppe.hasLayer(lag) : (lag._map !== null);
-                if (!paKartet) leggTil(lag);
+                if (!paKartet) {
+                    leggTil(lag);
+                    knapp.classList.remove("av");
+                }
                 if (typeof lag.getBounds === "function") {
                     const b = lag.getBounds();
                     if (b && b.isValid && b.isValid()) {

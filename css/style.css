@@ -302,7 +302,6 @@ body {
 }
 
 .lag-knapp.av {
-    opacity: 0.5;
     background-color: white;
     border-color: black;
 }
@@ -315,7 +314,7 @@ body {
     display: block;
 }
 
-.lag-knapp .zoom-knapp {
+.zoom-knapp {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -324,6 +323,10 @@ body {
     background: green;
     border-radius: .5rem;
     cursor: pointer;
+}
+
+.zoom-knapp:hover {
+    background: #0c0;
 }
 
 .zoom-knapp svg {
