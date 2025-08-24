@@ -83,12 +83,12 @@ body {
 /* Tog-animasjoner */
 @keyframes driveRight {
   from { transform: translateX(0); }
-  to { transform: translateX(120vw); }
+  to { transform: translateX(140vw); }
 }
 
 @keyframes driveLeft {
-  from { transform: translateX(0) scaleX(-1); }
-  to { transform: translateX(-120vw) scaleX(-1); }
+  from { transform: translateX(0); }
+  to { transform: translateX(-140vw); }
 }
 
 @keyframes driveDiagonal {
