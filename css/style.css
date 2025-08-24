@@ -301,6 +301,10 @@ body {
     cursor: pointer;
 }
 
+.lag-knapp:hover {
+    background: #0c0;
+}
+
 .lag-knapp.av {
     background-color: white;
     border-color: black;
@@ -344,6 +348,10 @@ body {
     border-width: 5px;
     border-radius: 1.5vh;
     cursor: pointer;
+}
+
+.master-knapp:hover {
+    background: #0c0;
 }
 
 .master-knapp.av {
