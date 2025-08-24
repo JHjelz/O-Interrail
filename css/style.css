@@ -324,8 +324,9 @@ body {
     justify-content: center;
     width: 2vh;
     height: 2vh;
-    background: green;
-    border-radius: .5rem;
+    color: white;
+    background-color: green;
+    border-radius: 50%;
     cursor: pointer;
 }
 
@@ -334,6 +335,7 @@ body {
 }
 
 .zoom-knapp svg {
+    fill: white;
     pointer-events: none;
 }
 
