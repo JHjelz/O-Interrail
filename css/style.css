@@ -38,7 +38,7 @@ body {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  z-index: 9999;
+  z-index: 1;
 }
 
 #intro .background {
@@ -47,11 +47,11 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("Intro_bakgrunn.png");
+  background-image: url("../Intro_bakgrunn.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  z-index: -1;
+  z-index: 2;
 }
 
 
@@ -63,21 +63,20 @@ body {
 }
 
 .train-left {
-  bottom: 20%;
-  left: -250px;
+  bottom: 15%;
+  left: -450px;
   animation: driveRight 3s linear forwards;
 }
 
 .train-right {
-  top: 30%;
-  right: -250px;
-  transform: scaleX(-1); /* speilvendt */
+  top: 20%;
+  right: -450px;
   animation: driveLeft 3.5s linear forwards 0.6s;
 }
 
 .train-diagonal {
-  bottom: -200px;
-  left: -250px;
+  bottom: -400px;
+  left: -450px;
   animation: driveDiagonal 4s linear forwards 1.2s;
 }
 
