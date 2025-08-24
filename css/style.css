@@ -54,7 +54,6 @@ body {
   z-index: 2;
 }
 
-
 /* Tog */
 .train {
   position: absolute;
@@ -314,6 +313,22 @@ body {
 
 .lag-knapp.Steder {
     display: block;
+}
+
+.lag-knapp .zoom-knapp {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2vh;
+    height: 2vh;
+    border: 1px solid #ccc;
+    background: #fff;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+
+.zoom-knapp svg {
+    pointer-events: none;
 }
 
 .master-knapp {

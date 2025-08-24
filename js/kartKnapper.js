@@ -47,14 +47,55 @@ function lagSidebarLagKontroller() {
             navn.textContent = id;
             navn.className = "lag-navn";
 
+            const zoomKnapp = document.createElement("button");
+            zoomKnapp.className = "zoom-knapp";
+            zoomKnapp.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/></svg>';
+
             const knapp = document.createElement("button");
             knapp.className = "lag-knapp";
             knapp.classList.add(tittel);
 
             leggTil(lag); // Start-tilstand
 
+            // Hjelpe-funksjon
+            const erLinje = (lyr) => {
+                if (lyr instanceof L.Polyline) return true;
+                if (lyr instanceof L.GeoJSON) {
+                    let harLinje = false;
+                    lyr.forEach(l => { if (l instanceof L.Polyline) harLinje = true; });
+                    return harLinje;
+                }
+                return false;
+            }
+
+            const paKartet = alltidPaaKartet ? clusterGruppe.hasLayer(lag) : (lag._map !== null);
+
+            zoomKnapp.onclick = () => {
+                if (!paKartet) leggTil();
+                if (typeof lag.getBounds === "function") {
+                    const b = lag.getBounds();
+                    if (b && b.isValid && b.isValid()) {
+                        map.fitBounds(b, { padding: [20, 20], maxZoom: 12 });
+                    }
+                }
+                const startSnake = (lyr) => {
+                    if (typeof lyr.snakeIn === "function") {
+                        if (lyr.options) {
+                            lyr.options.snakingSpeed = lyr.options.snakingSpeed || 400;
+                        }
+                        lyr.snakeIn();
+                    }
+                };
+                if (erLinje(lag)) {
+                    if (lag instanceof L.GeoJSON) {
+                        lag.forEach(l => { if (l instanceof L.Polyline) startSnake(l); });
+                    } else {
+                        startSnake(lag);
+                    }
+                }
+            };
+
             knapp.onclick = () => {
-                const paKartet = alltidPaaKartet ? clusterGruppe.hasLayer(lag) : (lag._map !== null);
                 if (paKartet) {
                     fjern(lag);
                     knapp.classList.add("av");
@@ -64,7 +105,8 @@ function lagSidebarLagKontroller() {
                 }
             };
             rad.appendChild(navn);
-            rad.appendChild(knapp)
+            rad.appendChild(zoomKnapp);
+            rad.appendChild(knapp);
             knappContainer.appendChild(rad);
         }
 
