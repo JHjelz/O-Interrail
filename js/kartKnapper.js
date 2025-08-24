@@ -68,9 +68,8 @@ function lagSidebarLagKontroller() {
                 return false;
             }
 
-            const paKartet = alltidPaaKartet ? clusterGruppe.hasLayer(lag) : (lag._map !== null);
-
             zoomKnapp.onclick = () => {
+                const paKartet = alltidPaaKartet ? clusterGruppe.hasLayer(lag) : (lag._map !== null);
                 if (!paKartet) leggTil(lag);
                 if (typeof lag.getBounds === "function") {
                     const b = lag.getBounds();
@@ -98,6 +97,7 @@ function lagSidebarLagKontroller() {
             };
 
             knapp.onclick = () => {
+                const paKartet = alltidPaaKartet ? clusterGruppe.hasLayer(lag) : (lag._map !== null);
                 if (paKartet) {
                     fjern(lag);
                     knapp.classList.add("av");
