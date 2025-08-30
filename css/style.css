@@ -166,20 +166,22 @@ body {
     border-style: dotted;
     border-width: 10px;
 }
-  
+
 .blogg-knapp.siste:hover {
     background-color: blue;
 }
 
 .blogg-knapp img.ikon {
-    width: 4vh;
-    height: 4vh;
+    width: 3vh;
+    height: 3vh;
+    padding-right: 1vh;
     filter: invert(100%)
 }
 
 .blogg-knapp.siste img.ikon {
-    width: 4vh;
-    height: 4vh;
+    width: 3vh;
+    height: 3vh;
+    padding-right: 1vh;
     filter: invert(100%);
 }
 
@@ -237,7 +239,7 @@ body {
     height: 8vh;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
-  
+
 .overskrift {
     flex-grow: 1;
     top: 15px;
@@ -326,6 +328,8 @@ body {
     height: 2vh;
     color: white;
     background-color: green;
+    border-color: white;
+    border-width: 2px;
     border-radius: 50%;
     cursor: pointer;
 }
@@ -336,6 +340,8 @@ body {
 
 .zoom-knapp svg {
     fill: white;
+    width: 100%;
+    height: 100%;
     pointer-events: none;
 }
 
