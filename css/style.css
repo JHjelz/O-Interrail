@@ -281,7 +281,7 @@ body {
 }
 
 .lag-navn {
-    font-size: 2vh;
+    font-size: 32px;
     color: white;
 }
 
@@ -292,8 +292,8 @@ body {
 
 .lag-knapp {
     display: block;
-    height: 2vh;
-    width: 2vh;
+    height: 32px;
+    width: 32px;
     margin-top: 5px;
     margin-bottom: 5px;
     background-color: green;
@@ -324,8 +324,8 @@ body {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 2vh;
-    height: 2vh;
+    width: 32px;
+    height: 32px;
     color: white;
     background-color: green;
     border-color: white;
