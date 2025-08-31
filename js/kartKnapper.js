@@ -39,6 +39,17 @@ function lagSidebarLagKontroller() {
 
         const knappContainer = lagDiv("knappContainer")
 
+        // Hjelpefunksjon som sjekker status for master-knappen
+        const oppdaterMasterKnapp = () => {
+            const alleKnapper = Array.from(knappContainer.getElementsByClassName("lag-knapp"));
+            const allePa = alleKnapper.every(kn => !kn.classList.contains("av"));
+            if (allePa) {
+                masterKnapp.classList.remove("av");
+            } else {
+                masterKnapp.classList.add("av");
+            }
+        };
+
         // En knapp per element
         for (const [id, lag] of Object.entries(layers)) {
             const rad = lagDiv("lag-rad");
@@ -108,6 +119,7 @@ function lagSidebarLagKontroller() {
                     leggTil(lag);
                     knapp.classList.remove("av");
                 }
+                oppdaterMasterKnapp();
             };
             rad.appendChild(navn);
             rad.appendChild(zoomKnapp);

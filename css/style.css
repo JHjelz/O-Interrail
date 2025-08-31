@@ -281,7 +281,7 @@ body {
 }
 
 .lag-navn {
-    font-size: 32px;
+    font-size: 2vh;
     color: white;
 }
 
@@ -332,6 +332,7 @@ body {
     border-width: 2px;
     border-radius: 50%;
     cursor: pointer;
+    padding-right: 5px;
 }
 
 .zoom-knapp:hover {
