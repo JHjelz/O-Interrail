@@ -98,7 +98,14 @@ function lagSidebarLagKontroller() {
                         if (lyr.options) {
                             lyr.options.snakingSpeed = lyr.options.snakingSpeed || 400;
                         }
-                        lyr.snakeIn();
+                        // liten timeout så laget rekker å legge seg på kartet
+                        setTimeout(() => {
+                            try {
+                                lyr.snakeIn();
+                            } catch (e) {
+                                console.warn("Kunne ikke snakeIn lag:", e);
+                            }
+                        }, 50);
                     }
                 };
                 if (erLinje(lag)) {
@@ -108,6 +115,7 @@ function lagSidebarLagKontroller() {
                         startSnake(lag);
                     }
                 }
+                oppdaterMasterKnapp();
             };
 
             knapp.onclick = () => {
