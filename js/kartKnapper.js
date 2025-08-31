@@ -95,23 +95,28 @@ function lagSidebarLagKontroller() {
                 }
                 const startSnake = (lyr) => {
                     if (typeof lyr.snakeIn === "function") {
+                        const latlngs = (lyr.getLatLngs && lyr.getLatLngs()) || [];
+                        if (latlngs === 0) {
+                            return;
+                        }
                         if (lyr.options) {
                             lyr.options.snakingSpeed = lyr.options.snakingSpeed || 400;
                         }
-                        // liten timeout så laget rekker å legge seg på kartet
-                        setTimeout(() => {
-                            try {
-                                lyr.snakeIn();
-                            } catch (e) {
-                                console.warn("Kunne ikke snakeIn lag:", e);
-                            }
-                        }, 50);
+                        try {
+                            lyr.snakeIn();
+                        } catch (e) {
+                            console.warn("Kunne ikke snakeIn lag:", e);
+                        }
                     }
                 };
                 if (erLinje(lag)) {
                     if (lag instanceof L.GeoJSON) {
-                        lag.eachLayer(l => { if (l instanceof L.Polyline) startSnake(l); });
-                    } else {
+                        lag.eachLayer(l => {
+                            if (l instanceof L.Polyline) {
+                                startSnake(l);
+                            }
+                        });
+                    } else if (lag instanceof L.Polyline) {
                         startSnake(lag);
                     }
                 }
