@@ -96,17 +96,29 @@ function lagSidebarLagKontroller() {
                 const startSnake = (lyr) => {
                     if (typeof lyr.snakeIn === "function") {
                         const latlngs = (lyr.getLatLngs && lyr.getLatLngs()) || [];
-                        if (latlngs === 0) {
+                        // Flatten hvis nested (MultiLineString etc.)
+                        while (Array.isArray(latlngs[0])) {
+                            latlngs = latlngs.flat();
+                        }
+                        if (latlngs.length === 0) {
+                            return;
+                        }
+                        // Sjekk at alle punktene er valide LatLng
+                        const gyldige = latlngs.every(ll => ll && typeof ll.lat === "number" && typeof ll.lng === "number");
+                        if (!gyldige || latlngs.length < 2) {
+                            console.warn("Dropper snakeIn for ugyldig lag:", lyr);
                             return;
                         }
                         if (lyr.options) {
                             lyr.options.snakingSpeed = lyr.options.snakingSpeed || 400;
                         }
-                        try {
-                            lyr.snakeIn();
-                        } catch (e) {
-                            console.warn("Kunne ikke snakeIn lag:", e);
-                        }
+                        setTimeout(() => {
+                            try {
+                                lyr.snakeIn();
+                            } catch (e) {
+                                console.warn("Kunne ikke snakeIn lag:", e);
+                            }
+                        }, 10);
                     }
                 };
                 if (erLinje(lag)) {
