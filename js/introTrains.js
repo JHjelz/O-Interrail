@@ -6,15 +6,22 @@ document.addEventListener("DOMContentLoaded", () =>{
     const flagsContainer = document.getElementById("flags");
 
     function createFlags() {
-        for (let i=0; i<10; i++) {
-            const flag = document.createElement("img");
-            flag.src = "Orienteringspost.png";
-            flag.classList.add("flag");
-            flag.style.left = Math.random() * 90 + "vw";
-            flag.style.animationDelay = (Math.random() * 2) + "s";
-            flagsContainer.appendChild(flag);
-        }
+    for (let i = 0; i < 100; i++) {
+        const flag = document.createElement("img");
+        flag.src = "Orienteringspost.png";
+        flag.classList.add("flag");
+
+        // Spre flaggene fra 10vw til 90vw
+        const left = 10 + Math.random() * 80; 
+        flag.style.left = left + "vw";
+
+        // Gi litt større variasjon i animasjonsdelay
+        const delay = i * 0.1 + Math.random() * 2; 
+        flag.style.animationDelay = delay + "s";
+
+        flagsContainer.appendChild(flag);
     }
+}
 
     createFlags();
 

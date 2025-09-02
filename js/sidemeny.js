@@ -17,6 +17,8 @@ function openSideMeny() {
         sideMeny.classList.remove("apen");
         apneKnapp.style.display = "block";
     }
+    const event = new CustomEvent("sideMenyToggle", { detail: { open: menyOpen } });
+    document.dispatchEvent(event);
 }
 
 // Knapper for å åpne og lukke menyen

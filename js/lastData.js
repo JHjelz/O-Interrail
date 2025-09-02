@@ -112,10 +112,14 @@ function lagIkon(kategori) {
 fetch('reiser.geojson')
   .then(response => response.json())
   .then(data => {
+    window.alleLand = new Set();
+
     data.features.forEach(feature => {
         const props = feature.properties;
         const type = feature.geometry.type;
         const id = props.navn;
+
+        if (props.land) window.alleLand.add(props.land);
         
         // Punkt
         if (type == "Point") {
@@ -154,6 +158,8 @@ fetch('reiser.geojson')
             const marker = L.marker(coords.reverse(), {
                 icon: lagIkon(props.type)
             }).bindPopup(popup);
+
+            marker.feature = feature;
 
             markerLayers[id] = marker;
     
@@ -213,11 +219,16 @@ fetch('reiser.geojson')
             }
 
             linje.bindPopup(popup);
+            linje.feature = feature;
             lineLayers[id] = linje;
             linje.addTo(map);
         }
     });
-    
+
+    document.dispatchEvent(new CustomEvent("dataLastet", {
+        detail: { alleLand: Array.from(window.alleLand) }
+    }));
+
     // Legger til clustering
     map.addLayer(clusterGruppe);
 

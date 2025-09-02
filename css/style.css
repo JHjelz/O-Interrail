@@ -366,3 +366,35 @@ body {
 .master-knapp.av {
     background-color: white;
 }
+
+#apneFilterKnapp {
+    transition: left 1s ease;
+}
+
+#lukkFilterKnapp {
+  position: absolute;
+  cursor: pointer;
+}
+
+.filter-overlay {
+    display: none;
+    position: fixed;
+    inset: 0; /* dekker hele skjermen */
+    background: rgba(0, 0, 0, 0.5); /* mørkt slør */
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+}
+
+.filter-box {
+    display: none;
+    background-color: orange;
+    color: white;
+    border: 1vw solid orangered;
+    border-radius: 12px;
+    padding: 20px;
+    width: 40vw;
+    max-width: 500px;
+    min-width: 250px;
+    position: relative;
+}
